@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Admin Login</title>
@@ -15,12 +15,12 @@
   <body id="login">
     <div class="container">
 
-      <form class="form-signin" action="<?php echo U('Index/login','','');?>" method="post">
+      <form class="form-signin" action="{:U('Admin/isadmin','','')}" method="post">
         <h2 class="form-signin-heading">请登录</h2>
         <input type="text" class="input-block-level" placeholder="Username"  name="username">
         <input type="password" class="input-block-level" placeholder="Password"  name="password">
         <label class="checkbox">
-          <input type="checkbox" value="remember-me"> 记住我
+          <input type="checkbox" value="remember-me" name ="remenber"> 记住我
         </label>
         <button class="btn btn-large btn-primary" type="submit">登陆</button>
       </form>
