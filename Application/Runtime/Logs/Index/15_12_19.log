@@ -59,6 +59,7 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
 ERR: 无法加载控制器:Admin
 
+<<<<<<< HEAD
 [ 2015-12-19T14:48:33+08:00 ] 127.0.0.1 /
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
@@ -76,3 +77,5 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001038s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001121s ]
 
+=======
+>>>>>>> 8582b954300c7ac9fb8022f84c6853e5afab5bbe

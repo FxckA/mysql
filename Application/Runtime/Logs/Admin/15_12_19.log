@@ -1640,6 +1640,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
 
+<<<<<<< HEAD
 [ 2015-12-19T14:48:27+08:00 ] 127.0.0.1 /admin.php/Index/index.html
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
@@ -3169,3 +3170,5 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
 
+=======
+>>>>>>> 8582b954300c7ac9fb8022f84c6853e5afab5bbe
