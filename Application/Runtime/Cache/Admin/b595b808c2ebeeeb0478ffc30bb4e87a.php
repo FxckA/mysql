@@ -23,7 +23,7 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">Admin Panel</a>
+                    <a class="brand" href="<?php echo U('index','','');?>">Admin Page</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
                             <li class="dropdown">
@@ -31,12 +31,11 @@
 
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <!--<li>
-                                        <a tabindex="-1" href="#">Profile</a>
-                                    </li>-->
-<!--                                    <li class="divider"></li>
--->                                    <li>
-                                        <a tabindex="-1" href="<?php echo U('logout','','');?>">Logout</a>
+                                    <li>
+                                        <a tabindex="-1" href="<?php echo U('changepassword','','');?>">修改密码</a>
+                                    </li>
+                                    <li class="divider"><li>
+                                        <a tabindex="-1" href="<?php echo U('logout','','');?>">安全退出</a>
                                     </li>
                                 </ul>
                             </li>
