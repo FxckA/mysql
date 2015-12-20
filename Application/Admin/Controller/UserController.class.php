@@ -1,22 +1,20 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class UserController extends Controller {
-	public function _before_changepassword() {
-		checkcookie();
-	}
-
+use Admin\Controller\BaseController;
+class UserController extends BaseController {
 	public function changepassword() {
-		$oldpassword = $_POST['oldpassword'];
-		$newpassword = $_POST['newpassword'];
+		$oldpassword = md5($_POST['oldpassword'] . C('salt'));
+		$newpassword = md5($_POST['newpassword'] . C('salt'));
 		$User = M('Admin') -> where("password = '%s'", $oldpassword) -> select();
 		if ($User) {
 			$Admin = M('Admin');
-			$Admin['password'] = md5($newpassword . C('salt'));
-			$Admin -> where("password = '%s'", $oldpassword) -> save();
-			$this -> success("密码修改成功!", U("Index/changepasswordindex"));
-		} else {
-			$this -> error("密码修改失败!可能原密码输错了！");
+			$Admin -> where("password = '%s'",$oldpassword) -> setField('password',$newpassword);
+			if ($Admin) {
+				$this -> success("密码修改成功!", U("Index/logout"));
+			} else {
+				$this -> error("密码修改失败!可能原密码输错了！");
+			}
+
 		}
 	}
 

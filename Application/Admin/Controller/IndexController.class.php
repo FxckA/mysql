@@ -1,17 +1,12 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class IndexController extends Controller {
-	public function _before_index() {
-		checkcookie();
-	}
-
+use Admin\Controller\BaseController;
+class IndexController extends BaseController {
 	public function index() {
 		$this -> display(T('index'));
 	}
 
 	public function changepasswordindex() {
-		checkcookie();
 		$this -> display(T('changepassword'));
 	}
 

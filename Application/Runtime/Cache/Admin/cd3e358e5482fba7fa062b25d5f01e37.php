@@ -25,7 +25,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="<?php echo U('index','','');?>">Admin Page</a>
+			<a class="brand" >Admin Page</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav pull-right">
 					<li class="dropdown">
@@ -45,7 +45,7 @@
 				</ul>
 				<ul class="nav">
 					<li class="active">
-						<a href="#">首页</a>
+						<a href="<?php echo U('index','','');?>">首页</a>
 					</li>
 					<li class="dropdown">
 						<a href="#" data-toggle="dropdown" class="dropdown-toggle">设置 <b class="caret"></b>
@@ -140,7 +140,7 @@
 					<a href="stats.html"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
 				</li>
 				<li>
-					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> Forms</a>
+					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
 				</li>
 				<li>
 					<a href="tables.html"><i class="icon-chevron-right"></i> Tables</a>

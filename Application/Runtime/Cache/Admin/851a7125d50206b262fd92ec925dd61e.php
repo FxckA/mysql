@@ -25,7 +25,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="<?php echo U('index','','');?>">Admin Page</a>
+			<a class="brand" >Admin Page</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav pull-right">
 					<li class="dropdown">
@@ -45,10 +45,10 @@
 				</ul>
 				<ul class="nav">
 					<li class="active">
-						<a href="#">Dashboard</a>
+						<a href="<?php echo U('index','','');?>">首页</a>
 					</li>
 					<li class="dropdown">
-						<a href="#" data-toggle="dropdown" class="dropdown-toggle">Settings <b class="caret"></b>
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">设置 <b class="caret"></b>
 
                                 </a>
 						<ul class="dropdown-menu" id="menu1">
@@ -84,7 +84,7 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Content <i class="caret"></i>
+						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">目录 <i class="caret"></i>
 
                                 </a>
 						<ul class="dropdown-menu">
@@ -107,19 +107,17 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Users <i class="caret"></i>
+						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">用户 <i class="caret"></i>
 
                                 </a>
 						<ul class="dropdown-menu">
 							<li>
-								<a tabindex="-1" href="#">User List</a>
+								<a tabindex="-1" href="<?php echo U('User/searchuser','','');?>">用户列表</a>
 							</li>
 							<li>
-								<a tabindex="-1" href="#">Search</a>
+								<a tabindex="-1" href="#">查找用户</a>
 							</li>
-							<li>
-								<a tabindex="-1" href="#">Permissions</a>
-							</li>
+						
 						</ul>
 					</li>
 				</ul>
@@ -133,7 +131,7 @@
 		<div class="span3" id="sidebar">
 			<ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
 				<li class="active">
-					<a href="index.html"><i class="icon-chevron-right"></i> 大家好</a>
+					<a href="index.html"><i class="icon-chevron-right"></i> 首页</a>
 				</li>
 				<li>
 					<a href="calendar.html"><i class="icon-chevron-right"></i> Calendar</a>
@@ -142,7 +140,7 @@
 					<a href="stats.html"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
 				</li>
 				<li>
-					<a href="form.html"><i class="icon-chevron-right"></i> Forms</a>
+					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
 				</li>
 				<li>
 					<a href="tables.html"><i class="icon-chevron-right"></i> Tables</a>

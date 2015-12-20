@@ -115,7 +115,7 @@
                                 </a>
 						<ul class="dropdown-menu">
 							<li>
-								<a tabindex="-1" href="#">用户列表</a>
+								<a tabindex="-1" href="<?php echo U('User/searchuser','','');?>">用户列表</a>
 							</li>
 							<li>
 								<a tabindex="-1" href="#">查找用户</a>
@@ -214,7 +214,7 @@
 							<div class="control-group">
 								<label class="control-label" for="disabledInput">再输新密码</label>
 								<div class="controls">
-									<input class="input-xlarge focused" id="focusedInput" type="password" name="newpassword" />
+									<input class="input-xlarge focused" id="focusedInput" type="password" name="newpassword2" />
 								</div>
 							</div>
 							
