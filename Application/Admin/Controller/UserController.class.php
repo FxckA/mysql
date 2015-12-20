@@ -8,7 +8,7 @@ class UserController extends BaseController {
 		$User = M('Admin') -> where("password = '%s'", $oldpassword) -> select();
 		if ($User) {
 			$Admin = M('Admin');
-			$Admin -> where("password = '%s'",$oldpassword) -> setField('password',$newpassword);
+			$Admin -> where("password = '%s'", $oldpassword) -> setField('password', $newpassword);
 			if ($Admin) {
 				$this -> success("密码修改成功!", U("Index/logout"));
 			} else {
@@ -17,5 +17,6 @@ class UserController extends BaseController {
 
 		}
 	}
+
 
 }

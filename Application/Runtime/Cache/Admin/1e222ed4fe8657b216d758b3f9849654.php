@@ -112,7 +112,7 @@
                                 </a>
 						<ul class="dropdown-menu">
 							<li>
-								<a tabindex="-1" href="#">用户列表</a>
+								<a tabindex="-1" href="<?php echo U('User/searchuser','','');?>">用户列表</a>
 							</li>
 							<li>
 								<a tabindex="-1" href="#">查找用户</a>

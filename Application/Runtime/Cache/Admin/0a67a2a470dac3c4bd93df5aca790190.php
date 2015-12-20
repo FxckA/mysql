@@ -115,7 +115,7 @@
                                 </a>
 						<ul class="dropdown-menu">
 							<li>
-								<a tabindex="-1" href="<?php echo U('User/searchuser','','');?>">用户列表</a>
+								<a tabindex="-1" href="<?php echo U('searchuser','','');?>">用户列表</a>
 							</li>
 							<li>
 								<a tabindex="-1" href="#">查找用户</a>
@@ -148,7 +148,7 @@
 					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
 				</li>
 				<li>
-					<a href="tables.html"><i class="icon-chevron-right"></i> Tables</a>
+					<a href="tables.html"><i class="icon-chevron-right"></i> 用户列表</a>
 				</li>
 				<li>
 					<a href="buttons.html"><i class="icon-chevron-right"></i> Buttons & Icons</a>
