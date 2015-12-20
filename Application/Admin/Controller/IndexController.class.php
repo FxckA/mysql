@@ -2,9 +2,11 @@
 namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+	public function _before_index() {
+		checkcookie();
+	}
 
 	public function index() {
-		checkcookie();
 		$this -> display(T('index'));
 	}
 

@@ -17,16 +17,17 @@
 		<script src="/Public/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
 
-	<body>
 
-<div class="navbar navbar-fixed-top">
+
+	<body>
+	<div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container-fluid">
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="<?php echo U('index','','');?>">Admin Page</a>
+			<a class="brand" >Admin Page</a>
 			<div class="nav-collapse collapse">
 				<ul class="nav pull-right">
 					<li class="dropdown">
@@ -46,10 +47,10 @@
 				</ul>
 				<ul class="nav">
 					<li class="active">
-						<a href="#">Dashboard</a>
+						<a href="<?php echo U('index','','');?>">首页</a>
 					</li>
 					<li class="dropdown">
-						<a href="#" data-toggle="dropdown" class="dropdown-toggle">Settings <b class="caret"></b>
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">设置 <b class="caret"></b>
 
                                 </a>
 						<ul class="dropdown-menu" id="menu1">
@@ -85,7 +86,7 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Content <i class="caret"></i>
+						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">目录 <i class="caret"></i>
 
                                 </a>
 						<ul class="dropdown-menu">
@@ -108,19 +109,17 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Users <i class="caret"></i>
+						<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">用户 <i class="caret"></i>
 
                                 </a>
 						<ul class="dropdown-menu">
 							<li>
-								<a tabindex="-1" href="#">User List</a>
+								<a tabindex="-1" href="#">用户列表</a>
 							</li>
 							<li>
-								<a tabindex="-1" href="#">Search</a>
+								<a tabindex="-1" href="#">查找用户</a>
 							</li>
-							<li>
-								<a tabindex="-1" href="#">Permissions</a>
-							</li>
+						
 						</ul>
 					</li>
 				</ul>
@@ -134,7 +133,7 @@
 		<div class="span3" id="sidebar">
 			<ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
 				<li class="active">
-					<a href="index.html"><i class="icon-chevron-right"></i> 大家好</a>
+					<a href="index.html"><i class="icon-chevron-right"></i> 首页</a>
 				</li>
 				<li>
 					<a href="calendar.html"><i class="icon-chevron-right"></i> Calendar</a>
@@ -143,7 +142,7 @@
 					<a href="stats.html"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
 				</li>
 				<li>
-					<a href="form.html"><i class="icon-chevron-right"></i> Forms</a>
+					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
 				</li>
 				<li>
 					<a href="tables.html"><i class="icon-chevron-right"></i> Tables</a>
@@ -188,19 +187,19 @@
 			<div class="row-fluid">
 				<div class="alert alert-success">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<h4>Success</h4> The operation completed successfully</div>
+					<h4>登陆成功！</h4> 操作已经执行成功！</div>
 				<div class="navbar">
 					<div class="navbar-inner">
 						<ul class="breadcrumb">
 							<i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
 							<i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
 							<li>
-								<a href="#">Dashboard</a> <span class="divider">/</span>
+								<a href="#">仪表盘</a> <span class="divider">/</span>
 							</li>
 							<li>
-								<a href="#">Settings</a> <span class="divider">/</span>
+								<a href="#">设置</a> <span class="divider">/</span>
 							</li>
-							<li class="active">Tools</li>
+							<li class="active">工具</li>
 						</ul>
 					</div>
 				</div>
@@ -502,17 +501,18 @@
 				<!-- /block -->
 			</div>
 		</div>
-	</div>
+</div>
 	
-		</div>
-</div>
-</div>
+		
 <hr>
 <footer>
 	<p>&copy; Vincent Gabriel 2013</p>
 </footer>
 </div>
-<!--/.fluid-container-->
+
+
+	
+	<!--/.fluid-container-->
 <script src="/Public/vendors/jquery-1.9.1.min.js"></script>
 <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
 <script src="/Public//easypiechart/jquery.easy-pie-chart.js"></script>
