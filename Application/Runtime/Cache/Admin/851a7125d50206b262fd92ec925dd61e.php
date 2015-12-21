@@ -186,6 +186,7 @@
 			</ul>
 		</div>
 
+</block name="userlist">
 <div class="span9" id="content">
 	<div class="row-fluid">
 		<!-- block -->
@@ -228,6 +229,7 @@
 	</div>
 </div>
 
+</block>
 
 <script src="/Public/vendors/jquery-1.9.1.js"></script>
 <script src="/Public/bootstrap/js/bootstrap.min.js"></script>

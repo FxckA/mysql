@@ -137,22 +137,19 @@
 					<a href="calendar.html"><i class="icon-chevron-right"></i> Calendar</a>
 				</li>
 				<li>
-					<a href="stats.html"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
+					<a href="stats.html"><i class="icon-chevron-right"></i> 流量</a>
 				</li>
 				<li>
 					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
 				</li>
 				<li>
-					<a href="tables.html"><i class="icon-chevron-right"></i> 用户列表</a>
+					<a href="<?php echo U('userlist','','');?>"><i class="icon-chevron-right"></i> 用户列表</a>
 				</li>
 				<li>
 					<a href="buttons.html"><i class="icon-chevron-right"></i> Buttons & Icons</a>
 				</li>
 				<li>
 					<a href="editors.html"><i class="icon-chevron-right"></i> WYSIWYG Editors</a>
-				</li>
-				<li>
-					<a href="interface.html"><i class="icon-chevron-right"></i> UI & Interface</a>
 				</li>
 				<li>
 					<a href="#"><span class="badge badge-success pull-right">731</span> Orders</a>

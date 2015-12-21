@@ -15,8 +15,9 @@ class UserController extends BaseController {
 				$this -> error("密码修改失败!可能原密码输错了！");
 			}
 
+		} else {
+			$this -> error("密码修改失败!可能原密码输错了！");
 		}
 	}
-
 
 }

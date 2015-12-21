@@ -184,57 +184,40 @@
 		</div>
 
 <div class="span9" id="content">
-	<!-- morris stacked chart -->
 	<div class="row-fluid">
 		<!-- block -->
 		<div class="block">
 			<div class="navbar navbar-inner block-header">
-				<div class="muted pull-left"></div>
+				<div class="muted pull-left">Basic Table</div>
 			</div>
-			<!--<script language="JavaScript">
-				function checkpasswd() {
-					var passwd = document.getElementById("newpassword1").value;
-					var repasswd = document.getElementById("newpassword2").value;
-					if (passwd === repasswd) {
-						return true;
-					} else {
-						window.alert("两次输入密码不一致");
-						return false;
-					}
-				}
-			</script>-->
 			<div class="block-content collapse in">
 				<div class="span12">
-					<form class="form-horizontal" action="<?php echo U('User/changepassword','','');?>" method="post">
-						<fieldset>
-							<legend>修改密码</legend>
-							<div class="control-group">
-								<label class="control-label" for="focusedInput">原密码</label>
-								<div class="controls">
-									<input class="input-xlarge focused" id="focusedInput" type="password" name="oldpassword" />
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label">新密码</label>
-								<div class="controls">
-									<input class="input-xlarge focused" id="newpassword1" type="password" name="newpassword" />
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label" for="disabledInput">再输新密码</label>
-								<div class="controls">
-									<input class="input-xlarge focused" id="newpassword2" type="password" name="newpassword2" />
-								</div>
-							</div>
-
-							<div class="form-actions">
-								<button type="submit" class="btn btn-primary" >修改</button>
-								<button type="reset" class="btn">返回</button>
-							</div>
-
-						</fieldset>
-					</form>
-
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>用户名</th>
+								<th>角色</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php if(is_array($user)): $i = 0; $__LIST__ = $user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+									<td><?php echo ($vo["id"]); ?></td>
+									<td><?php echo ($vo["username"]); ?></td>
+									<td><?php echo ($vo["whoami"]); ?></td>
+								</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+							<!--<tr>
+								<td>2</td>
+								<td>Jacob</td>
+								<td>Thornton</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Larry</td>
+								<td>the Bird</td>
+							</tr>-->
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -242,70 +225,15 @@
 	</div>
 </div>
 
-	
-<hr>
-<footer>
-	<p>power by phantomer 2016</p>
-</footer>
-</div>
-
-
-
-<!--/.fluid-container-->
-<link href="/Public/vendors/datepicker.css" rel="stylesheet" media="screen">
-<link href="/Public/vendors/uniform.default.css" rel="stylesheet" media="screen">
-<link href="/Public/vendors/chosen.min.css" rel="stylesheet" media="screen">
-
-<link href="/Public/vendors/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
 
 <script src="/Public/vendors/jquery-1.9.1.js"></script>
 <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
-<script src="/Public/vendors/jquery.uniform.min.js"></script>
-<script src="/Public/vendors/chosen.jquery.min.js"></script>
-<script src="/Public/vendors/bootstrap-datepicker.js"></script>
-
-<script src="/Public/vendors/wysiwyg/wysihtml5-0.3.0.js"></script>
-<script src="/Public/vendors/wysiwyg/bootstrap-wysihtml5.js"></script>
-
-<script src="/Public/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
-
-<script type="text/javascript" src="/Public/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="/Public/assets/form-validation.js"></script>
+<script src="/Public/vendors/datatables/js/jquery.dataTables.min.js"></script>
 
 <script src="/Public/assets/scripts.js"></script>
+<script src="/Public/assets/DT_bootstrap.js"></script>
 <script>
-	jQuery(document).ready(function() {
-		FormValidation.init();
-	});
-	$(function() {
-		$(".datepicker").datepicker();
-		$(".uniform_on").uniform();
-		$(".chzn-select").chosen();
-		$('.textarea').wysihtml5();
-		$('#rootwizard').bootstrapWizard({
-			onTabShow: function(tab, navigation, index) {
-				var $total = navigation.find('li').length;
-				var $current = index + 1;
-				var $percent = ($current / $total) * 100;
-				$('#rootwizard').find('.bar').css({
-					width: $percent + '%'
-				});
-				// If it's the last tab then hide the last button and show the finish instead
-				if ($current >= $total) {
-					$('#rootwizard').find('.pager .next').hide();
-					$('#rootwizard').find('.pager .finish').show();
-					$('#rootwizard').find('.pager .finish').removeClass('disabled');
-				} else {
-					$('#rootwizard').find('.pager .next').show();
-					$('#rootwizard').find('.pager .finish').hide();
-				}
-			}
-		});
-		$('#rootwizard .finish').click(function() {
-			alert('Finished!, Starting over!');
-			$('#rootwizard').find("a[href*='tab1']").trigger('click');
-		});
-	});
+	$(function() {});
 </script>
 </body>
 

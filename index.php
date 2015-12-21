@@ -21,7 +21,6 @@ define('APP_DEBUG',True);
 define('APP_PATH','./Application/');
 
 define('BIND_MODULE','Index');
-define('BUILD_CONTROLLER_LIST','Index');
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';

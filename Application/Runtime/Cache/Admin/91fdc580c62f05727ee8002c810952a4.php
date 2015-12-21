@@ -143,7 +143,7 @@
 					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
 				</li>
 				<li>
-					<a href="tables.html"><i class="icon-chevron-right"></i> 用户列表</a>
+					<a href="<?php echo U('userlist','','');?>"><i class="icon-chevron-right"></i> 用户列表</a>
 				</li>
 				<li>
 					<a href="buttons.html"><i class="icon-chevron-right"></i> Buttons & Icons</a>
