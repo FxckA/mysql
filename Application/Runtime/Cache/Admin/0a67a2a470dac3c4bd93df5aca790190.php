@@ -115,7 +115,7 @@
                                 </a>
 						<ul class="dropdown-menu">
 							<li>
-								<a tabindex="-1" href="<?php echo U('searchuser','','');?>">用户列表</a>
+								<a tabindex="-1" href="<?php echo U('userlist','','');?>">用户列表</a>
 							</li>
 							<li>
 								<a tabindex="-1" href="#">查找用户</a>
@@ -237,7 +237,7 @@
 	
 <hr>
 <footer>
-	<p>&copy; Vincent Gabriel 2013</p>
+	<p>power by phantomer 2016</p>
 </footer>
 </div>
 

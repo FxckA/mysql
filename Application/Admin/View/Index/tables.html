@@ -25,12 +25,14 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>1</td>
-								<td>{$name}</td>
-								<td>{$name}</td>
-							</tr>
-							<tr>
+							<volist name="user" id="vo">
+								<tr>
+									<td>{$vo.id}</td>
+									<td>{$vo.username}</td>
+									<td>{$vo.whoami}</td>
+								</tr>
+							</volist>
+							<!--<tr>
 								<td>2</td>
 								<td>Jacob</td>
 								<td>Thornton</td>
@@ -39,7 +41,7 @@
 								<td>3</td>
 								<td>Larry</td>
 								<td>the Bird</td>
-							</tr>
+							</tr>-->
 						</tbody>
 					</table>
 				</div>
@@ -48,10 +50,7 @@
 		<!-- /block -->
 	</div>
 </div>
-<block name="down">
-	<include file="down" />
-</block>
-<!--/.fluid-container-->
+
 
 <script src="/Public/vendors/jquery-1.9.1.js"></script>
 <script src="/Public/bootstrap/js/bootstrap.min.js"></script>

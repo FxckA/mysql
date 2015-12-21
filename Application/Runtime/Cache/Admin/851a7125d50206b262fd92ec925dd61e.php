@@ -115,7 +115,7 @@
                                 </a>
 						<ul class="dropdown-menu">
 							<li>
-								<a tabindex="-1" href="<?php echo U('searchuser','','');?>">用户列表</a>
+								<a tabindex="-1" href="<?php echo U('userlist','','');?>">用户列表</a>
 							</li>
 							<li>
 								<a tabindex="-1" href="#">查找用户</a>
@@ -148,7 +148,7 @@
 					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
 				</li>
 				<li>
-					<a href="tables.html"><i class="icon-chevron-right"></i> 用户列表</a>
+					<a href="<?php echo U('userlist','','');?>"><i class="icon-chevron-right"></i> 用户列表</a>
 				</li>
 				<li>
 					<a href="buttons.html"><i class="icon-chevron-right"></i> Buttons & Icons</a>
@@ -204,12 +204,12 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Mark</td>
-								<td><?php echo ($name); ?></td>
-							</tr>
-							<tr>
+							<?php if(is_array($user)): $i = 0; $__LIST__ = $user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+									<td><?php echo ($vo["id"]); ?></td>
+									<td><?php echo ($vo["username"]); ?></td>
+									<td><?php echo ($vo["whoami"]); ?></td>
+								</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+							<!--<tr>
 								<td>2</td>
 								<td>Jacob</td>
 								<td>Thornton</td>
@@ -218,7 +218,7 @@
 								<td>3</td>
 								<td>Larry</td>
 								<td>the Bird</td>
-							</tr>
+							</tr>-->
 						</tbody>
 					</table>
 				</div>
@@ -228,16 +228,6 @@
 	</div>
 </div>
 
-	
-<hr>
-<footer>
-	<p>power by phantomer 2016</p>
-</footer>
-</div>
-
-
-
-<!--/.fluid-container-->
 
 <script src="/Public/vendors/jquery-1.9.1.js"></script>
 <script src="/Public/bootstrap/js/bootstrap.min.js"></script>

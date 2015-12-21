@@ -15,14 +15,10 @@ class IndexController extends BaseController {
 		$this -> redirect('Login/index');
 	}
 
-	public function searchuser() {
+	public function userlist() {
 		$User = M('Admin') -> getField('id,username,whoami');
-		var_dump($User);
-		foreach ($User as $key => $value) {
-			echo $key.'</br>'.$value;
-//			$this -> assign('name',$key);
-		}
-//		$this -> display(T('tables'));
+		$this -> assign('user', $User);
+		$this -> display(T('tables'));
 	}
 
 }
