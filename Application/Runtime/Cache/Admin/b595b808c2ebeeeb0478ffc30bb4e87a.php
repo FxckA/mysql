@@ -142,7 +142,7 @@
 					<a href="calendar.html"><i class="icon-chevron-right"></i> Calendar</a>
 				</li>
 				<li>
-					<a href="stats.html"><i class="icon-chevron-right"></i> 流量</a>
+					<a href="<?php echo U('stats','','');?>"><i class="icon-chevron-right"></i> 流量</a>
 				</li>
 				<li>
 					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
@@ -249,8 +249,7 @@
 			<div class="block">
 				<div class="navbar navbar-inner block-header">
 					<div class="muted pull-left">UsersList</div>
-					<div class="pull-right"><span class="badge badge-info">2</span>
-
+					<div class="pull-right"><span class="badge badge-info"></span>
 					</div>
 				</div>
 				<div class="block-content collapse in">

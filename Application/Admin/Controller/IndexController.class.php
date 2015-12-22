@@ -23,4 +23,12 @@ class IndexController extends BaseController {
 		$this -> display(T('userlist'));
 	}
 
+	public function stats() {
+		$this -> display(T('stats'));
+	}
+
+	public function editors() {
+		$this -> display(T('editors'));
+	}
+
 }

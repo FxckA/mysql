@@ -136,13 +136,13 @@
 		<div class="span3" id="sidebar">
 			<ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
 				<li class="active">
-					<a href="index.html"><i class="icon-chevron-right"></i> 首页</a>
+					<a href="<?php echo U('index','','');?>"><i class="icon-chevron-right"></i> 首页</a>
 				</li>
 				<li>
 					<a href="calendar.html"><i class="icon-chevron-right"></i> Calendar</a>
 				</li>
 				<li>
-					<a href="stats.html"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
+					<a href="<?php echo U('stats','','');?>"><i class="icon-chevron-right"></i> 流量</a>
 				</li>
 				<li>
 					<a href="<?php echo U('changepassword','','');?>"><i class="icon-chevron-right"></i> 修改密码</a>
@@ -154,7 +154,7 @@
 					<a href="buttons.html"><i class="icon-chevron-right"></i> Buttons & Icons</a>
 				</li>
 				<li>
-					<a href="editors.html"><i class="icon-chevron-right"></i> WYSIWYG Editors</a>
+					<a href="<?php echo U('editors','','');?>"><i class="icon-chevron-right"></i> 编辑</a>
 				</li>
 				<li>
 					<a href="#"><span class="badge badge-success pull-right">731</span> Orders</a>
