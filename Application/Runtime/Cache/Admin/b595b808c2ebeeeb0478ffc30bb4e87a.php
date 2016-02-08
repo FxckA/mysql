@@ -265,7 +265,7 @@
 							<?php if(is_array($user)): $i = 0; $__LIST__ = $user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
 									<td><?php echo ($vo["id"]); ?></td>
 									<td><?php echo ($vo["username"]); ?></td>
-									<td><?php echo ($vo["whoami"]); ?></td>
+									<td><?php echo ($vo["level"]); ?></td>
 								</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 						</tbody>
 					</table>
