@@ -112,8 +112,6 @@ INFO:
 INFO: 
 INFO: 
 
-<<<<<<< HEAD
-=======
 [ 2016-02-08T22:24:13+08:00 ] ::1 /admin.php/
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
@@ -978,4 +976,3 @@ INFO:
 INFO: 
 INFO: 
 
->>>>>>> dev
