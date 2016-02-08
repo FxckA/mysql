@@ -154,7 +154,7 @@
 					<a href="buttons.html"><i class="icon-chevron-right"></i> Buttons & Icons</a>
 				</li>
 				<li>
-					<a href="editors.html"><i class="icon-chevron-right"></i> WYSIWYG Editors</a>
+					<a href="<?php echo U('editors','','');?>"><i class="icon-chevron-right"></i> 编辑</a>
 				</li>
 				<li>
 					<a href="#"><span class="badge badge-success pull-right">731</span> Orders</a>

@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Admin\Controller\BaseController;
 class IndexController extends BaseController {
 	public function index() {
-		$User = M('Admin') -> getField('id,username,whoami');
+		$User = M('Admin') -> getField('id,username,level');
 		$this -> assign('user', $User);
 		$this -> display(T('index'));
 	}
@@ -18,7 +18,7 @@ class IndexController extends BaseController {
 	}
 
 	public function userlist() {
-		$User = M('Admin') -> getField('id,username,whoami');
+		$User = M('Admin') -> getField('id,username,level');
 		$this -> assign('user', $User);
 		$this -> display(T('userlist'));
 	}
