@@ -183,125 +183,152 @@
 			</ul>
 		</div>
 
-<div class="span9" id="content">
-	<!-- morris stacked chart -->
+<div class="span8">
 	<div class="row-fluid">
-		<!-- block -->
-		<div class="block">
-			<div class="navbar navbar-inner block-header">
-				<div class="muted pull-left"></div>
-			</div>
-			<div class="block-content collapse in">
-				<div class="span12">
-					<form class="form-horizontal" action="<?php echo U('User/changepassword','','');?>" method="post">
-						<fieldset>
-							<legend>修改密码</legend>
-							<div class="control-group">
-								<label class="control-label" for="focusedInput">原密码</label>
-								<div class="controls">
-									<input class="input-xlarge focused" id="focusedInput" type="password" name="oldpassword" />
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label">新密码</label>
-								<div class="controls">
-									<input class="input-xlarge focused" id="newpassword1" type="password" name="newpassword" />
-								</div>
-							</div>
-							<div class="control-group">
-								<label class="control-label" for="disabledInput">确认新密码</label>
-								<div class="controls">
-									<input class="input-xlarge focused" id="newpassword2" type="password" name="newpassword2"  />
-								</div>
-							</div>
-							<!--<script>
-								function validatePWD(){
-									var txtPwd=$("#newpassword1");
-									var txtPwd2=$("newpassword2");
-									if(txtPwd.val()!=txtPwd2.val()){
-										$("#div3").text("密码输入不一样，请重新输入！").css({"font-size":"12px","color":"red"});
-									}
-								}
-							</script>-->
-
-							<div class="form-actions">
-								<button type="submit" class="btn btn-primary" >修改</button>
-								<button type="reset" class="btn">返回</button>
-							</div>
-
-						</fieldset>
-					</form>
-
+		<div class="span12" id="content">
+			<div class="row-fluid">
+				<!-- block -->
+				<div class="block">
+					<div class="navbar navbar-inner block-header">
+						<div class="muted pull-left">CKEditor Standard</div>
+					</div>
+					<div class="block-content collapse in">
+						<textarea id="ckeditor_standard"></textarea>
+					</div>
 				</div>
+				<!-- /block -->
 			</div>
 		</div>
-		<!-- /block -->
+
+		<div class="span12" id="content">
+			<div class="row-fluid">
+				<!-- block -->
+				<div class="block">
+					<div class="navbar navbar-inner block-header">
+						<div class="muted pull-left">CKEditor Full</div>
+					</div>
+					<div class="block-content collapse in">
+						<textarea id="ckeditor_full"></textarea>
+					</div>
+				</div>
+				<!-- /block -->
+			</div>
+		</div>
+
+		<div class="span12" id="content">
+			<div class="row-fluid">
+				<!-- block -->
+				<div class="block">
+					<div class="navbar navbar-inner block-header">
+						<div class="muted pull-left">TinyMCE Basic</div>
+					</div>
+					<div class="block-content collapse in">
+						<textarea id="tinymce_basic"></textarea>
+					</div>
+				</div>
+				<!-- /block -->
+			</div>
+		</div>
+
+		<div class="span12" id="content">
+			<div class="row-fluid">
+				<!-- block -->
+				<div class="block">
+					<div class="navbar navbar-inner block-header">
+						<div class="muted pull-left">TinyMCE Full</div>
+					</div>
+					<div class="block-content collapse in">
+						<textarea id="tinymce_full"></textarea>
+					</div>
+				</div>
+				<!-- /block -->
+			</div>
+		</div>
+
+		<div class="span12" id="content">
+			<div class="row-fluid">
+				<!-- block -->
+				<div class="block">
+					<div class="navbar navbar-inner block-header">
+						<div class="muted pull-left">Bootstrap WYSIWYG</div>
+					</div>
+					<div class="block-content collapse in">
+						<textarea id="bootstrap-editor" placeholder="Enter text ..." style="width:98%;height:200px;"></textarea>
+					</div>
+				</div>
+				<!-- /block -->
+			</div>
+		</div>
+
 	</div>
 </div>
 
-	
-<hr>
-<footer>
-	<p>power by phantomer 2016</p>
-</footer>
-</div>
-
-
 
 <!--/.fluid-container-->
-<link href="/Public/vendors/datepicker.css" rel="stylesheet" media="screen">
-<link href="/Public/vendors/uniform.default.css" rel="stylesheet" media="screen">
-<link href="/Public/vendors/chosen.min.css" rel="stylesheet" media="screen">
-
-<link href="/Public/vendors/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
-
-<script src="/Public/vendors/jquery-1.9.1.js"></script>
+<script src="/Public/vendors/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
+<script src="/Public/vendors/jquery-1.9.1.min.js"></script>
 <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
-<script src="/Public/vendors/jquery.uniform.min.js"></script>
-<script src="/Public/vendors/chosen.jquery.min.js"></script>
-<script src="/Public/vendors/bootstrap-datepicker.js"></script>
+<script src="/Public/vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
 
-<script src="/Public/vendors/wysiwyg/wysihtml5-0.3.0.js"></script>
-<script src="/Public/vendors/wysiwyg/bootstrap-wysihtml5.js"></script>
+<script src="/Public/vendors/ckeditor/ckeditor.js"></script>
+<script src="/Public/vendors/ckeditor/adapters/jquery.js"></script>
 
-<script src="/Public/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
-
-<script type="text/javascript" src="/Public/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="/Public/assets/form-validation.js"></script>
+<script type="text/javascript" src="/Public/vendors/tinymce/js/tinymce/tinymce.min.js"></script>
 
 <script src="/Public/assets/scripts.js"></script>
 <script>
-	jQuery(document).ready(function() {
-		FormValidation.init();
-	});
 	$(function() {
-		$(".datepicker").datepicker();
-		$(".uniform_on").uniform();
-		$(".chzn-select").chosen();
-		$('.textarea').wysihtml5();
-		$('#rootwizard').bootstrapWizard({
-			onTabShow: function(tab, navigation, index) {
-				var $total = navigation.find('li').length;
-				var $current = index + 1;
-				var $percent = ($current / $total) * 100;
-				$('#rootwizard').find('.bar').css({
-					width: $percent + '%'
-				});
-				// If it's the last tab then hide the last button and show the finish instead
-				if ($current >= $total) {
-					$('#rootwizard').find('.pager .next').hide();
-					$('#rootwizard').find('.pager .finish').show();
-					$('#rootwizard').find('.pager .finish').removeClass('disabled');
-				} else {
-					$('#rootwizard').find('.pager .next').show();
-					$('#rootwizard').find('.pager .finish').hide();
+		// Bootstrap
+		$('#bootstrap-editor').wysihtml5();
+		// Ckeditor standard
+		$('textarea#ckeditor_standard').ckeditor({
+			width: '98%',
+			height: '150px',
+			toolbar: [{
+					name: 'document',
+					items: ['Source', '-', 'NewPage', 'Preview', '-', 'Templates']
+				}, // Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
+				['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'], // Defines toolbar group without name.
+				{
+					name: 'basicstyles',
+					items: ['Bold', 'Italic']
 				}
-			}
+			]
 		});
-		$('#rootwizard .finish').click(function() {
-			alert('Finished!, Starting over!');
-			$('#rootwizard').find("a[href*='tab1']").trigger('click');
+		$('textarea#ckeditor_full').ckeditor({
+			width: '98%',
+			height: '150px'
 		});
+	});
+	// Tiny MCE
+	tinymce.init({
+		selector: "#tinymce_basic",
+		plugins: [
+			"advlist autolink lists link image charmap print preview anchor",
+			"searchreplace visualblocks code fullscreen",
+			"insertdatetime media table contextmenu paste"
+		],
+		toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+	});
+	// Tiny MCE
+	tinymce.init({
+		selector: "#tinymce_full",
+		plugins: [
+			"advlist autolink lists link image charmap print preview hr anchor pagebreak",
+			"searchreplace wordcount visualblocks visualchars code fullscreen",
+			"insertdatetime media nonbreaking save table contextmenu directionality",
+			"emoticons template paste textcolor"
+		],
+		toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+		toolbar2: "print preview media | forecolor backcolor emoticons",
+		image_advtab: true,
+		templates: [{
+			title: 'Test template 1',
+			content: 'Test 1'
+		}, {
+			title: 'Test template 2',
+			content: 'Test 2'
+		}]
 	});
 </script>
 </body>
