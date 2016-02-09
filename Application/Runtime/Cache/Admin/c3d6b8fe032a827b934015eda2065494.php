@@ -118,7 +118,7 @@
 								<a tabindex="-1" href="<?php echo U('userlist','','');?>">用户列表</a>
 							</li>
 							<li>
-								<a tabindex="-1" href="#">查找用户</a>
+								<a tabindex="-1" href="<?php echo U('changepassword','','');?>">修改密码</a>
 							</li>
 						
 						</ul>

@@ -3,14 +3,14 @@
   <head>
     <title>Admin Login</title>
     <!-- Bootstrap -->
-    <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/Public/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link href="/Public/assets/styles.css" rel="stylesheet" media="screen">
+    <link href="/Public/login/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/Public/login/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/Public/login/assets/styles.css" rel="stylesheet" media="screen">
      <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="/Public/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="/Public/login/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
   <body id="login">
     <div class="container">
@@ -26,7 +26,7 @@
       </form>
 
     </div> <!-- /container -->
-    <script src="/Public/vendors/jquery-1.9.1.min.js"></script>
-    <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+<!--    <script src="/Public/vendors/jquery-1.9.1.min.js"></script>
+-->    <script src="/Public/login/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
