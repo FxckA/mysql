@@ -46,7 +46,7 @@
 			<div class="avtar">
 				<img src="/Public/login/images/avtar.png" />
 			</div>
-			<form action="<?php echo U('Admin/isadmin','','');?>" method="post">
+			<form action="<?php echo U('Login/login');?>" method="post">
 				<input type="text" class="text" placeholder="Username" name="username">
 				<div class="key">
 					<input type="password" placeholder="Password" name="password">
