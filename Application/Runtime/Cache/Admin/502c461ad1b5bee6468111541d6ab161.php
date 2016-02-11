@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>后台主页</title>
+    <title>编辑文章</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
@@ -74,125 +74,55 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 <div id="page-wrapper">
-
-	<div class="row">
-		<div class="col-lg-3">
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa  fa-comment fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">456</p>
-							<p class="announcement-text">留言</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								查看留言
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-warning">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-users fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">12</p>
-							<p class="announcement-text">用户</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理用户
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-edit fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">18</p>
-							<p class="announcement-text">文章</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理文章
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-link fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">56</p>
-							<p class="announcement-text">链接</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理链接
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-	<!-- /.row -->
-
-	<!-- /.row -->
-
-	<!-- /.row -->
-
+    <form method="post" action="<?php echo U('post/update?id='); echo ($category["id"]); ?>">
+        <div class="form-group">
+            <label for="post-title">文章标题</label>
+            <input type="text" name="title" class="form-control" value="<?php echo ($post["title"]); ?>" id="post-title" placeholder="输入文章标题">
+        </div>
+        <div class="form-group">
+            <label for="post-cate">文章分类</label>
+            <select name="cate_id" id="post-cate" class="form-control">
+                <?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($post['cate_id'] == $v['id']) {echo 'selected="selected"' ;}?>><?php echo ($v["html"]); ?> <?php echo ($v["title"]); ?></option><?php endforeach; endif; ?>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="post-content">文章内容</label>
+            <script id="post-content" name="content" type="text/plain"><?php echo (htmlspecialchars_decode($post["content"])); ?></script>
+        </div>
+        <div class="form-group">
+            <label>文章类型</label>
+            <label class="radio-inline">
+              <input type="radio" name="type" id="type" value="1" <?php if($post["type"] == 1): ?>checked="checked"<?php endif; ?> >普通
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="type" id="type" value="2" <?php if($post["type"] == 2): ?>checked="checked"<?php endif; ?>>置顶
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="type" id="type" value="3" <?php if($post["type"] == 3): ?>checked="checked"<?php endif; ?>>热门
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="type" id="type" value="4" <?php if($post["type"] == 4): ?>checked="checked"<?php endif; ?>>推荐
+            </label>
+        </div>
+        <input type="hidden" name="id" value="<?php echo ($post["id"]); ?>">
+        <button type="submit" class="btn btn-default">提交</button>
+    </form>
 </div>
-
+<!-- 配置文件 -->
+<script type="text/javascript" src="/Public/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/Public/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('post-content',{
+        toolbars: [
+            ['fullscreen', 'source', 'undo', 'redo','bold', 'italic', 'underline','fontborder', 'strikethrough', '|','simpleupload', 'insertimage','attachment','emotion','link','unlink', '|', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote','searchreplace', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc'],
+            ['inserttable','insertrow', 'insertcol','mergeright', 'mergedown','deleterow', 'deletecol','splittorows','splittocols', 'splittocells','deletecaption','inserttitle', 'mergecells', 'deletetable','insertparagraphbeforetable', 'paragraph','fontsize','fontfamily']
+        ],
+        initialFrameHeight:500,
+        zIndex:100
+    });
+</script>
 <!-- JavaScript -->
 <script src="/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>
 <script src="/Application/Admin/View//Public/static/js/bootstrap.js"></script>

@@ -58,7 +58,7 @@
 
 		</div>
 		<div class="copy-rights">
-			<p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.mycodes.net/" target="_blank" title="admin">admin</a></p>
+			<p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.doublefei.com" target="_blank" title="admin">admin</a></p>
 		</div>
 
 	</body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>后台主页</title>
+    <title>更新用户</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
@@ -74,123 +74,44 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 <div id="page-wrapper">
-
-	<div class="row">
-		<div class="col-lg-3">
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa  fa-comment fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">456</p>
-							<p class="announcement-text">留言</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								查看留言
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-warning">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-users fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">12</p>
-							<p class="announcement-text">用户</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理用户
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-edit fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">18</p>
-							<p class="announcement-text">文章</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理文章
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-link fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">56</p>
-							<p class="announcement-text">链接</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理链接
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
+<form action="<?php echo U('member/update');?>" method="post">
+	<div class="form-group">
+		<label>用户名</label>
+		<input class="form-control" type="text" name="username" value="<?php echo ($model["username"]); ?>">
 	</div>
-	<!-- /.row -->
+	<div class="form-group">
+		<label>邮箱</label>
+		<input class="form-control" type="text" name="email" value="<?php echo ($model["email"]); ?>">
+	</div>
+	<div class="form-group">
+		<label>新密码</label>
+		<input class="form-control" type="password" name="password" placeholder="不填写则不更改">
+	</div>
+	<div class="form-group">
+        <label>用户类型</label>
+        <label class="radio-inline">
+          <input type="radio" name="type" id="type" value="1" <?php if($model["type"] == 1): ?>checked="checked"<?php endif; ?>>前台用户
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="type" id="type" value="2" <?php if($model["type"] == 2): ?>checked="checked"<?php endif; ?>>管理员
+        </label>
+    </div>
+	<div class="form-group">
+        <label>用户状态</label>
+        <label class="radio-inline">
+          <input type="radio" name="status" id="status" value="0" <?php if($model["status"] == 0): ?>checked="checked"<?php endif; ?>>禁止登陆
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="status" id="status" value="1" <?php if($model["status"] == 1): ?>checked="checked"<?php endif; ?>>正常
+        </label>
+    </div>
+	<div class="form-group">
+		<input type="hidden" name="id" value="<?php echo ($model["id"]); ?>">
+		<button class="btn btn-success" type="submit" >更新</button>
+	</div>
 
-	<!-- /.row -->
 
-	<!-- /.row -->
-
+</form>
 </div>
 
 <!-- JavaScript -->
