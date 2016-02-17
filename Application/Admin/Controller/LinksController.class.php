@@ -12,7 +12,7 @@ class LinksController extends BaseController
      */
     public function index($key="")
     {
-        if($key == ""){
+        if($key === ""){
             $model = M('links');  
         }else{
             $where['title'] = array('like',"%$key%");
@@ -22,7 +22,7 @@ class LinksController extends BaseController
         } 
         
         $count  = $model->where($where)->count();// 查询满足要求的总记录数
-        $Page = new \Extend\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $Page = new \Extend\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数(15)
         $show = $Page->show();// 分页显示输出
         $links = $model->limit($Page->firstRow.','.$Page->listRows)->where($where)->order('id DESC')->select();
         $this->assign('model', $links);

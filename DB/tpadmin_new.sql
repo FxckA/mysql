@@ -1,13 +1,13 @@
 # ************************************************************
 # Sequel Pro SQL dump
-# Version 4135
+# Version 4499
 #
 # http://www.sequelpro.com/
-# http://code.google.com/p/sequel-pro/
+# https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.5.42)
+# Host: localhost (MySQL 5.5.42)
 # Database: tpadmin
-# Generation Time: 2015-07-16 13:12:58 +0000
+# Generation Time: 2015-12-03 03:23:47 +0000
 # ************************************************************
 
 
@@ -109,7 +109,7 @@ LOCK TABLES `member` WRITE;
 
 INSERT INTO `member` (`id`, `username`, `email`, `password`, `avatar`, `create_at`, `update_at`, `login_ip`, `status`, `type`)
 VALUES
-	(1,'admin','515343908@qq.com','21232f297a57a5a743894a0e4a801fc3',NULL,'1436679338','1436935104','0.0.0.0',1,2);
+	(1,'admin','rootphantomy@hotmail.com','21232f297a57a5a743894a0e4a801fc3',NULL,'1436679338','1436935104','0.0.0.0',1,2);
 
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -125,6 +125,7 @@ CREATE TABLE `member_oauth` (
   `qq` varchar(100) DEFAULT NULL COMMENT 'QQ openid',
   `sina` varchar(100) DEFAULT NULL COMMENT 'sina openid',
   `github` varchar(100) DEFAULT NULL COMMENT 'github openid',
+  `weixin` varchar(255) DEFAULT NULL COMMENT 'weixin openid',
   `member_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

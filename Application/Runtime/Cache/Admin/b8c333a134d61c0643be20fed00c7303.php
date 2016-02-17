@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章列表</title>
+    <title>添加链接</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
@@ -74,54 +74,23 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 <div id="page-wrapper">
-    
-    <div class="row">
-        <div class="col-md-6">
-            <a href="<?php echo U('post/add');?>" class="btn btn-success">添加文章</a>
+    <form method="post" action="<?php echo U('links/add');?>">
+        <div class="form-group">
+            <label for="aa">链接标题</label>
+            <input type="text" name="title" class="form-control" id="aa" placeholder="输入链接标题">
         </div>
-        <div class="col-md-6">
-            <form action="<?php echo U('post/index');?>" method="post">
-                <div class="form-group input-group">
-                    <input type="text" class="form-control" name="key" placeholder="输入文章标题、作者或者分类关键词搜索">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                    </span>
-                </div>
-            </form>
+        <div class="form-group">
+            <label for="bb">链接地址</label>
+            <input type="text" name="url" class="form-control" id="bb" placeholder="输入链接标题">
         </div>
-    </div>
-    <table class="table table-hover table-striped">
-        <thead>
-            <tr>
-                <th>编号</th>
-                <th>标题</th>
-                <th>类型</th>
-                <th>发布时间</th>
-                <th>作者</th>
-                <th>分类</th>
-                <th>操作</th> 
-            </tr>
-        </thead>
-        <tbody>
-        <?php if(is_array($model)): foreach($model as $key=>$v): ?><tr>
-                <td><?php echo ($v["id"]); ?></td>
-                <td><a href="#" style="color: inherit;"><?php echo ($v["title"]); ?></a></td>
-                <td>
-                    <?php if($v["type"] == 1): ?><span class="label label-success">普通</span>
-                    <?php elseif($v["type"] == 2): ?><span class="label label-info">置顶</span>
-                    <?php elseif($v["type"] == 3): ?><span class="label label-primary">热门</span>
-                    <?php elseif($v["type"] == 4): ?><span class="label label-warning">推荐</span><?php endif; ?>
-                </td>
-                <td><?php echo (date("Y/m/d H:i:s",$v["time"])); ?></td>
-                <td><?php echo ($v["username"]); ?></td>
-                <td><?php echo ($v["category_title"]); ?></td>
-                <td><a href="<?php echo U('post/update?id='); echo ($v["id"]); ?>">编辑</a> | <a href="<?php echo U('post/delete?id='); echo ($v["id"]); ?>" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
-            </tr><?php endforeach; endif; ?>
-        </tbody>
-    </table>
-    <div class="clearfix"></div>
-    <?php echo ($page); ?>
-    
+        <div class="form-group">
+            <label for="cc">优先级</label>
+            <input type="text" name="sort" class="form-control" id="cc" placeholder="越大越靠前" value="100">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">提交</button>
+        </div>
+    </form>
 </div>
 <!-- JavaScript -->
 <script src="/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>

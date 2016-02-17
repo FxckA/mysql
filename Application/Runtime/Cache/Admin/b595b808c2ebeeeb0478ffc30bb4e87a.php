@@ -111,12 +111,12 @@
 							<i class="fa fa-users fa-5x"></i>
 						</div>
 						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">12</p>
+							<p class="announcement-heading"><?php echo ($data["member"]); ?></p>
 							<p class="announcement-text">用户</p>
 						</div>
 					</div>
 				</div>
-				<a href="#">
+				<a href="<?php echo U("member/index");?>">
 					<div class="panel-footer announcement-bottom">
 						<div class="row">
 							<div class="col-xs-6">
@@ -138,12 +138,12 @@
 							<i class="fa fa-edit fa-5x"></i>
 						</div>
 						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">18</p>
+							<p class="announcement-heading"><?php echo ($data["post"]); ?></p>
 							<p class="announcement-text">文章</p>
 						</div>
 					</div>
 				</div>
-				<a href="#">
+				<a href="<?php echo U("post/index");?>">
 					<div class="panel-footer announcement-bottom">
 						<div class="row">
 							<div class="col-xs-6">
@@ -165,12 +165,12 @@
 							<i class="fa fa-link fa-5x"></i>
 						</div>
 						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">56</p>
+							<p class="announcement-heading"><?php echo ($data["links"]); ?></p>
 							<p class="announcement-text">链接</p>
 						</div>
 					</div>
 				</div>
-				<a href="#">
+				<a href="<?php echo U("links/index");?>">
 					<div class="panel-footer announcement-bottom">
 						<div class="row">
 							<div class="col-xs-6">
