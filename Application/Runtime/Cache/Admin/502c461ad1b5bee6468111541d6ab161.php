@@ -65,7 +65,7 @@
                 <li class="dropdown user-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 你好,<?php echo session('username');?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-gear"></i> 设置</a></li>
+                        <li><a href="<?php echo U('member/index');?>"><i class="fa fa-gear"></i> 设置</a></li>
                         <li class="divider"></li>
                         <li><a href="<?php echo U('login/logout');?>"><i class="fa fa-power-off"></i> 退出</a></li>
                     </ul>
@@ -74,39 +74,41 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 <div id="page-wrapper">
-    <form method="post" action="<?php echo U('post/update?id='); echo ($category["id"]); ?>">
-        <div class="form-group">
-            <label for="post-title">文章标题</label>
-            <input type="text" name="title" class="form-control" value="<?php echo ($post["title"]); ?>" id="post-title" placeholder="输入文章标题">
-        </div>
-        <div class="form-group">
-            <label for="post-cate">文章分类</label>
-            <select name="cate_id" id="post-cate" class="form-control">
-                <?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($post['cate_id'] == $v['id']) {echo 'selected="selected"' ;}?>><?php echo ($v["html"]); ?> <?php echo ($v["title"]); ?></option><?php endforeach; endif; ?>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="post-content">文章内容</label>
-            <script id="post-content" name="content" type="text/plain"><?php echo (htmlspecialchars_decode($post["content"])); ?></script>
-        </div>
-        <div class="form-group">
-            <label>文章类型</label>
-            <label class="radio-inline">
-              <input type="radio" name="type" id="type" value="1" <?php if($post["type"] == 1): ?>checked="checked"<?php endif; ?> >普通
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="type" id="type" value="2" <?php if($post["type"] == 2): ?>checked="checked"<?php endif; ?>>置顶
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="type" id="type" value="3" <?php if($post["type"] == 3): ?>checked="checked"<?php endif; ?>>热门
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="type" id="type" value="4" <?php if($post["type"] == 4): ?>checked="checked"<?php endif; ?>>推荐
-            </label>
-        </div>
-        <input type="hidden" name="id" value="<?php echo ($post["id"]); ?>">
-        <button type="submit" class="btn btn-default">提交</button>
-    </form>
+	<form method="post" action="<?php echo U('post/update?id='); echo ($category["id"]); ?>">
+		<div class="form-group">
+			<label for="post-title">文章标题</label>
+			<input type="text" name="title" class="form-control" value="<?php echo ($post["title"]); ?>" id="post-title" placeholder="输入文章标题">
+		</div>
+		<div class="form-group">
+			<label for="post-cate">文章分类</label>
+			<select name="cate_id" id="post-cate" class="form-control">
+				<?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($post['cate_id']==$v['id']) {echo 'selected="selected"' ;}?>><?php echo ($v["html"]); ?> <?php echo ($v["title"]); ?></option><?php endforeach; endif; ?>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="post-content">文章内容</label>
+			<script id="post-content" name="content" type="text/plain"><?php echo (htmlspecialchars_decode($post["content"])); ?></script>
+		</div>
+		<div class="form-group">
+			<label>文章类型</label>
+			<label class="radio-inline">
+				<input type="radio" name="type" id="type" value="1" <?php if($post["type"] == 1): ?>checked="checked"<?php endif; ?> >普通
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="type" id="type" value="2" <?php if($post["type"] == 2): ?>checked="checked"<?php endif; ?>>置顶
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="type" id="type" value="3" <?php if($post["type"] == 3): ?>checked="checked"<?php endif; ?>>热门
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="type" id="type" value="4" <?php if($post["type"] == 4): ?>checked="checked"<?php endif; ?>>推荐
+			</label>
+		</div>
+		<input type="hidden" name="id" value="<?php echo ($post["id"]); ?>">
+		<button type="submit" class="btn btn-default">提交</button>
+		<button type="submit" class="btn btn-default" onclick="javascript:history.back();">返回</button>
+	</form>
+
 </div>
 <!-- 配置文件 -->
 <script type="text/javascript" src="/Public/ueditor/ueditor.config.js"></script>
@@ -114,14 +116,14 @@
 <script type="text/javascript" src="/Public/ueditor/ueditor.all.js"></script>
 <!-- 实例化编辑器 -->
 <script type="text/javascript">
-    var ue = UE.getEditor('post-content',{
-        toolbars: [
-            ['fullscreen', 'source', 'undo', 'redo','bold', 'italic', 'underline','fontborder', 'strikethrough', '|','simpleupload', 'insertimage','attachment','emotion','link','unlink', '|', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote','searchreplace', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc'],
-            ['inserttable','insertrow', 'insertcol','mergeright', 'mergedown','deleterow', 'deletecol','splittorows','splittocols', 'splittocells','deletecaption','inserttitle', 'mergecells', 'deletetable','insertparagraphbeforetable', 'paragraph','fontsize','fontfamily']
-        ],
-        initialFrameHeight:500,
-        zIndex:100
-    });
+	var ue = UE.getEditor('post-content', {
+		toolbars: [
+			['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'strikethrough', '|', 'simpleupload', 'insertimage', 'attachment', 'emotion', 'link', 'unlink', '|', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'searchreplace', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc'],
+			['inserttable', 'insertrow', 'insertcol', 'mergeright', 'mergedown', 'deleterow', 'deletecol', 'splittorows', 'splittocols', 'splittocells', 'deletecaption', 'inserttitle', 'mergecells', 'deletetable', 'insertparagraphbeforetable', 'paragraph', 'fontsize', 'fontfamily']
+		],
+		initialFrameHeight: 500,
+		zIndex: 100
+	});
 </script>
 <!-- JavaScript -->
 <script src="/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>

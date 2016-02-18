@@ -12,10 +12,10 @@ class PostController extends BaseController
      */
     public function index($key="")
     {
-        if($key == ""){
+        if($key === ""){
             $model = D('PostView'); 
         }else{
-            $where['post.title'] = array('like',"%$key%");
+            $where['articlescrap.title'] = array('like',"%$key%");
             $where['member.username'] = array('like',"%$key%");
             $where['category.title'] = array('like',"%$key%");
             $where['_logic'] = 'or';
@@ -25,7 +25,7 @@ class PostController extends BaseController
         $count  = $model->where($where)->count();// 查询满足要求的总记录数
         $Page = new \Extend\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数(25)
         $show = $Page->show();// 分页显示输出
-        $post = $model->limit($Page->firstRow.','.$Page->listRows)->where($where)->order('post.id DESC')->select();
+        $post = $model->limit($Page->firstRow.','.$Page->listRows)->where($where)->order('articlescrap.id DESC')->select();
         $this->assign('model', $post);
         $this->assign('page',$show);
         $this->display();     
@@ -67,7 +67,7 @@ class PostController extends BaseController
     {
         //默认显示添加表单
         if (!IS_POST) {
-            $model = M('post')->where('id='.$id)->find();
+            $model = M('articlescrap')->where('id='.$id)->find();
             $this->assign("category",getSortedCategory(M('category')->select()));
             $this->assign('post',$model);
             $this->display();
@@ -92,7 +92,7 @@ class PostController extends BaseController
      */
     public function delete($id)
     {
-        $model = M('post');
+        $model = M('articlescrap');
         $result = $model->where("id=".$id)->delete();
         if($result){
             $this->success("删除成功", U('post/index'));

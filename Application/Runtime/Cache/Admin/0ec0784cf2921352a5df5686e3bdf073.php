@@ -65,7 +65,7 @@
                 <li class="dropdown user-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 你好,<?php echo session('username');?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-gear"></i> 设置</a></li>
+                        <li><a href="<?php echo U('member/index');?>"><i class="fa fa-gear"></i> 设置</a></li>
                         <li class="divider"></li>
                         <li><a href="<?php echo U('login/logout');?>"><i class="fa fa-power-off"></i> 退出</a></li>
                     </ul>
@@ -115,7 +115,7 @@
                 <td><?php echo (date("Y/m/d H:i:s",$v["time"])); ?></td>
                 <td><?php echo ($v["username"]); ?></td>
                 <td><?php echo ($v["category_title"]); ?></td>
-                <td><a href="<?php echo U('post/update?id='); echo ($v["id"]); ?>">编辑</a> | <a href="<?php echo U('post/delete?id='); echo ($v["id"]); ?>" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
+                <td><a>发布or未发布</a> | <a href="<?php echo U('post/update?id='); echo ($v["id"]); ?>">编辑</a> | <a href="<?php echo U('post/delete?id='); echo ($v["id"]); ?>" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
             </tr><?php endforeach; endif; ?>
         </tbody>
     </table>
