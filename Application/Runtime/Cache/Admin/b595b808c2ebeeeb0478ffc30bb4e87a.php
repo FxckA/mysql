@@ -65,7 +65,7 @@
                 <li class="dropdown user-dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 你好,<?php echo session('username');?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fa fa-gear"></i> 设置</a></li>
+                        <li><a href="<?php echo U('member/index');?>"><i class="fa fa-gear"></i> 设置</a></li>
                         <li class="divider"></li>
                         <li><a href="<?php echo U('login/logout');?>"><i class="fa fa-power-off"></i> 退出</a></li>
                     </ul>
