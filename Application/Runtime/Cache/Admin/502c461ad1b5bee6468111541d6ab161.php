@@ -82,7 +82,7 @@
 		<div class="form-group">
 			<label for="post-cate">文章分类</label>
 			<select name="cate_id" id="post-cate" class="form-control">
-				<?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($post['cate_id']==$v['id']) {echo 'selected="selected"' ;}?>><?php echo ($v["html"]); ?> <?php echo ($v["title"]); ?></option><?php endforeach; endif; ?>
+				<?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($post[ 'cate_id']==$v[ 'id']) {echo 'selected="selected"' ;}?>><?php echo ($v["html"]); ?> <?php echo ($v["title"]); ?></option><?php endforeach; endif; ?>
 			</select>
 		</div>
 		<div class="form-group">
@@ -106,7 +106,7 @@
 		</div>
 		<input type="hidden" name="id" value="<?php echo ($post["id"]); ?>">
 		<button type="submit" class="btn btn-default">提交</button>
-		<button type="submit" class="btn btn-default" onclick="javascript:history.back();">返回</button>
+		<button class="btn btn-default" onclick="javascript:history.back();">返回</button>
 	</form>
 
 </div>
