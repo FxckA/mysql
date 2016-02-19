@@ -39,7 +39,7 @@
         <a href="<?php echo U('category/index');?>"><i class="fa fa-reorder"></i> 分类管理</a>
     </li>
     <li class="dropdown">
-        <a href="<?php echo U('post/index');?>"><i class="fa fa-edit"></i> 文章管理</a>
+        <a href="<?php echo U('articlescrap/index');?>"><i class="fa fa-edit"></i> 文章管理</a>
     </li>
     <li class="dropdown">
         <a href="<?php echo U('page/index');?>"><i class="fa fa-file-text-o"></i> 单页管理 </a>

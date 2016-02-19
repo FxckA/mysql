@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>后台主页</title>
+    <title>用户列表</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
@@ -39,7 +39,7 @@
         <a href="<?php echo U('category/index');?>"><i class="fa fa-reorder"></i> 分类管理</a>
     </li>
     <li class="dropdown">
-        <a href="<?php echo U('articlescrap/index');?>"><i class="fa fa-edit"></i> 文章管理</a>
+        <a href="<?php echo U('post/index');?>"><i class="fa fa-edit"></i> 文章管理</a>
     </li>
     <li class="dropdown">
         <a href="<?php echo U('page/index');?>"><i class="fa fa-file-text-o"></i> 单页管理 </a>
@@ -74,123 +74,56 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 <div id="page-wrapper">
+    <div class="row">
+        <div class="col-md-6">
+            <a href="<?php echo U('member/add');?>" class="btn btn-success">添加用户</a>
+        </div>
+        <div class="col-md-6">
+            <form action="<?php echo U('member/index');?>" method="post">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" name="key" placeholder="输入用户名或者邮箱关键词搜索">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    
 
-	<div class="row">
-		<div class="col-lg-3">
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa  fa-comment fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">456</p>
-							<p class="announcement-text">留言</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								查看留言
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-warning">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-users fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading"><?php echo ($data["member"]); ?></p>
-							<p class="announcement-text">用户</p>
-						</div>
-					</div>
-				</div>
-				<a href="<?php echo U("member/index");?>">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理用户
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-edit fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading"><?php echo ($data["articlescrap"]); ?></p>
-							<p class="announcement-text">文章</p>
-						</div>
-					</div>
-				</div>
-				<a href="<?php echo U("articlescrap/index");?>">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理文章
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-link fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading"><?php echo ($data["links"]); ?></p>
-							<p class="announcement-text">链接</p>
-						</div>
-					</div>
-				</div>
-				<a href="<?php echo U("links/index");?>">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理链接
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-	<!-- /.row -->
-
-	<!-- /.row -->
-
-	<!-- /.row -->
-
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <td>编号</td>
+                <td>用户名</td>
+                <td>邮箱</td>
+                <td>注册时间</td>
+                <td>上次登陆</td>
+                <td>登陆IP</td>
+                <td>类型</td>
+                <td>状态</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+        <?php if(is_array($member)): foreach($member as $key=>$v): ?><tr>
+                <td><?php echo ($v["id"]); ?></td>
+                <td><?php echo ($v["username"]); ?></td>
+                <td><?php echo ($v["email"]); ?></td>
+                <td><?php echo (date("Y/m/d H:i:s",$v["create_at"])); ?></td>
+                <td><?php echo (date("Y/m/d H:i:s",$v["update_at"])); ?></td>
+                <td><?php echo ($v["login_ip"]); ?></td>
+                <td>
+                    <?php if($v["type"] == 1): ?><span class="label label-success">会员</span>
+                    <?php elseif($v["type"] == 2): ?><span class="label label-danger">管理员</span><?php endif; ?>
+                </td> 
+                <td><?php if($v["status"] == 1): ?>正常<?php else: ?><span style="color:red">禁用</span><?php endif; ?></td>
+                <?php if($v["status"] == 1): ?><td><a href="<?php echo U('member/update?id='); echo ($v["id"]); ?>">编辑</a> | <a href="<?php echo U('member/delete?id='); echo ($v["id"]); ?>" style="color:red;" onclick="javascript:return del('禁用后用户将不能登陆后台!\n\n请确认!!!');">禁用</a></td>
+            	<?php else: ?>
+            		<td><a href="<?php echo U('member/update?id='); echo ($v["id"]); ?>">编辑</a> | <a href="<?php echo U('member/delete?id='); echo ($v["id"]); ?>" style="color:#50AD1E;">启用</a></td><?php endif; ?>
+            </tr><?php endforeach; endif; ?>
+        </tbody>
+    </table>
 </div>
 
 <!-- JavaScript -->

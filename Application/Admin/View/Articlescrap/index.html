@@ -3,10 +3,10 @@
     
     <div class="row">
         <div class="col-md-6">
-            <a href="{:U('post/add')}" class="btn btn-success">添加文章</a>
+            <a href="{:U('articlescrap/add')}" class="btn btn-success">添加文章</a>
         </div>
         <div class="col-md-6">
-            <form action="{:U('post/index')}" method="post">
+            <form action="{:U('articlescrap/index')}" method="post">
                 <div class="form-group input-group">
                     <input type="text" class="form-control" name="key" placeholder="输入文章标题、作者或者分类关键词搜索">
                     <span class="input-group-btn">
@@ -43,7 +43,7 @@
                 <td>{$v.time|date="Y/m/d H:i:s",###}</td>
                 <td>{$v.username}</td>
                 <td>{$v.category_title}</td>
-                <td><a>发布or未发布</a> | <a href="{:U('post/update?id=')}{$v.id}">编辑</a> | <a href="{:U('post/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
+                <td><a>发布or未发布</a> | <a href="{:U('articlescrap/update?id=')}{$v.id}">编辑</a> | <a href="{:U('articlescrap/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
             </tr>
         </foreach>
         </tbody>

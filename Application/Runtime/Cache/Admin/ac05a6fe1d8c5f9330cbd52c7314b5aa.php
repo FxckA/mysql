@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>后台主页</title>
+    <title>添加文章</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
@@ -74,125 +74,55 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 <div id="page-wrapper">
-
-	<div class="row">
-		<div class="col-lg-3">
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa  fa-comment fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading">456</p>
-							<p class="announcement-text">留言</p>
-						</div>
-					</div>
-				</div>
-				<a href="#">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								查看留言
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
+	<form method="post" action="<?php echo U('articlescrap/add');?>">
+		<div class="form-group">
+			<label for="post-title">文章标题</label>
+			<input type="text" name="title" class="form-control" id="post-title" placeholder="输入文章标题">
 		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-warning">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-users fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading"><?php echo ($data["member"]); ?></p>
-							<p class="announcement-text">用户</p>
-						</div>
-					</div>
-				</div>
-				<a href="<?php echo U("member/index");?>">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理用户
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
+		<div class="form-group">
+			<label for="post-cate">文章分类</label>
+			<select name="cate_id" id="post-cate" class="form-control">
+				<?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>"><?php echo ($v["html"]); ?> <?php echo ($v["title"]); ?></option><?php endforeach; endif; ?>
+			</select>
 		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-edit fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading"><?php echo ($data["articlescrap"]); ?></p>
-							<p class="announcement-text">文章</p>
-						</div>
-					</div>
-				</div>
-				<a href="<?php echo U("articlescrap/index");?>">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理文章
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
+		<div class="form-group">
+			<label for="post-content">文章内容</label>
+			<script id="post-content" name="content" type="text/plain"></script>
 		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-xs-6">
-							<i class="fa fa-link fa-5x"></i>
-						</div>
-						<div class="col-xs-6 text-right">
-							<p class="announcement-heading"><?php echo ($data["links"]); ?></p>
-							<p class="announcement-text">链接</p>
-						</div>
-					</div>
-				</div>
-				<a href="<?php echo U("links/index");?>">
-					<div class="panel-footer announcement-bottom">
-						<div class="row">
-							<div class="col-xs-6">
-								管理链接
-							</div>
-							<div class="col-xs-6 text-right">
-								<i class="fa fa-arrow-circle-right"></i>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
+		<div class="form-group">
+			<label>文章类型</label>
+			<label class="radio-inline">
+				<input type="radio" name="type" id="type" value="1" checked="checked">普通
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="type" id="type" value="2">置顶
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="type" id="type" value="3">热门
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="type" id="type" value="4">推荐
+			</label>
 		</div>
-	</div>
-	<!-- /.row -->
-
-	<!-- /.row -->
-
-	<!-- /.row -->
-
+		<button type="submit" class="btn btn-default">提交</button>
+		<button class="btn btn-default" onclick="javascript:history.back();">返回</button>
+	</form>
 </div>
-
+<!-- 配置文件 -->
+<script type="text/javascript" src="/Public/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="/Public/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+	var ue = UE.getEditor('post-content', {
+		toolbars: [
+			['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'strikethrough', '|', 'simpleupload', 'insertimage', 'attachment', 'emotion', 'link', 'unlink', '|', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'searchreplace', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc'],
+			['inserttable', 'insertrow', 'insertcol', 'mergeright', 'mergedown', 'deleterow', 'deletecol', 'splittorows', 'splittocols', 'splittocells', 'deletecaption', 'inserttitle', 'mergecells', 'deletetable', 'insertparagraphbeforetable', 'paragraph', 'fontsize', 'fontfamily']
+		],
+		initialFrameHeight: 500,
+		zIndex: 100
+	});
+</script>
 <!-- JavaScript -->
 <script src="/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>
 <script src="/Application/Admin/View//Public/static/js/bootstrap.js"></script>
