@@ -10,7 +10,7 @@ class ArticlescrapController extends BaseController
      * 文章列表
      * @return [type] [description]
      */
-    public function index($key="")
+    public function index($key = "")
     {
         if($key === ""){
             $model = D('articlescrap'); 
@@ -19,7 +19,7 @@ class ArticlescrapController extends BaseController
             $where['member.username'] = array('like',"%$key%");
             $where['category.title'] = array('like',"%$key%");
             $where['_logic'] = 'or';
-            $model = D('articlescrapview')->where($where); 
+            $model = D('articlescrap')->where($where); 
         } 
         
         $count  = $model->where($where)->count();// 查询满足要求的总记录数
