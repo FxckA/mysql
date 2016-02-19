@@ -39,7 +39,7 @@
         <a href="<?php echo U('category/index');?>"><i class="fa fa-reorder"></i> 分类管理</a>
     </li>
     <li class="dropdown">
-        <a href="<?php echo U('post/index');?>"><i class="fa fa-edit"></i> 文章管理</a>
+        <a href="<?php echo U('articlescrap/index');?>"><i class="fa fa-edit"></i> 文章管理</a>
     </li>
     <li class="dropdown">
         <a href="<?php echo U('page/index');?>"><i class="fa fa-file-text-o"></i> 单页管理 </a>
@@ -99,7 +99,7 @@
 			<textarea name="description" id="dd" cols="30" rows="10" class="form-control" placeholder="请输入分类描述(选填)"></textarea>
 		</div>
 		<button type="submit" class="btn btn-default">添加</button>
-		<button class="btn btn-default" onclick="javascript:self.location=document.referrer;">返回</button>
+		<button class="btn btn-default" onclick="javascript:history.back();">返回</button>
 	</form>
 </div>
 <!-- JavaScript -->
