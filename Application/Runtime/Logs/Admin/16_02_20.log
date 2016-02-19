@@ -1,0 +1,9 @@
+[ 2016-02-20T00:03:49+08:00 ] ::1 /admin.php?m=Admin&c=articlescrap&a=index
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tpadmin.articlescrap' doesn't exist
+
+[ 2016-02-20T00:03:49+08:00 ] ::1 /admin.php
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tpadmin.articlescrap' doesn't exist
+
+[ 2016-02-20T00:03:50+08:00 ] ::1 /admin.php
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tpadmin.articlescrap' doesn't exist
+

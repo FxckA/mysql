@@ -13,7 +13,7 @@ class ArticlescrapController extends BaseController
     public function index($key = "")
     {
         if($key === ""){
-            $model = D('articlescrap'); 
+            $model = D('articlescrapview'); 
         }else{
             $where['articlescrap.title'] = array('like',"%$key%");
             $where['member.username'] = array('like',"%$key%");
