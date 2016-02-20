@@ -115,7 +115,7 @@
                 <td><?php echo (date("Y/m/d H:i:s",$v["time"])); ?></td>
                 <td><?php echo ($v["username"]); ?></td>
                 <td><?php echo ($v["category_title"]); ?></td>
-                <td><a href="<?php echo U('articlescrap/post?id='); echo ($v["id"]); ?>">发布or未发布</a> | <a href="<?php echo U('articlescrap/update?id='); echo ($v["id"]); ?>">编辑</a> | <a href="<?php echo U('articlescrap/delete?id='); echo ($v["id"]); ?>" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
+                <td><?php if($v["status"] == 0): ?><a href="<?php echo U('articlescrap/post?id='); echo ($v["id"]); ?>">发布</a><elseif condition="$v.status eq 1"><a href="<?php echo U('articlescrap/post?id='); echo ($v["id"]); ?>">撤销</a><?php endif; ?> | <a href="<?php echo U('articlescrap/update?id='); echo ($v["id"]); ?>">编辑</a> | <a href="<?php echo U('articlescrap/delete?id='); echo ($v["id"]); ?>" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
             </tr><?php endforeach; endif; ?>
         </tbody>
     </table>

@@ -7,16 +7,7 @@
 	<script type="text/javascript" src="/Application/Home/View//Public/static/js/init.js"></script>
 </head>
 <body>
-	<h3>欢迎使用ThinkPHP通用后台</h3>
-	<p>列表页: <a href="<?php echo U('Articlescrap/index',array('name'=>'cnsecer'));?>"><?php echo U('Articlescrap/index',array('name'=>'cnsecer'));?></a> </p>
-	<p>详情页: <a href="<?php echo U('Articlescrap/view',array('id'=>1));?>"><?php echo U('Articlescrap/view',array('id'=>1));?></a> </p>
-	<p>单页: <a href="<?php echo U('Page/index',array('name'=>'cnsecer'));?>"><?php echo U('Page/index',array('name'=>'cnsecer'));?></a> </p>
-	<p>登录页: <a href="<?php echo U('login/login');?>"><?php echo U('login/login');?></a></p>
-	<p>QQ登录: <a href="<?php echo U('login/login',array('type'=>'qq'));?>"><?php echo U('login/login',array('type'=>'qq'));?></a></p>
-	<hr>
-	<p>后台地址: <a href="admin.php">admin.php</a></p>
-	<p>账号:admin</p>
-	<p>密码:admin</p>
+	<h3>详情页</h3>
 </body>
 
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>

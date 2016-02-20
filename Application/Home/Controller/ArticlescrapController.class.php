@@ -6,15 +6,15 @@ use Think\Controller;
 /**
  * 发布文章必须登录
  */
-class PostController extends BaseController{
+class ArticlescrapController extends BaseController{
 
     public function index($name){
         $this->display();
     }
 
     public function view($id){
-        $post = M('post')->find($id);
-        $this->assign('post', $post);
+        $post = M('Articlescrap')->find($id);
+        $this->assign('Articlescrap', $post);
         $this->display();
     }
 }
