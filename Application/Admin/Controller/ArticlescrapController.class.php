@@ -11,7 +11,7 @@ class ArticlescrapController extends BaseController {
 	 */
 	public function index($key = "") {
 		if ($key === "") {
-			$model = D('articlescrapview');
+			$model = D('ArticlescrapView');
 		} else {
 			$where['articlescrap.title'] = array('like', "%$key%");
 			$where['member.username'] = array('like', "%$key%");
@@ -26,7 +26,7 @@ class ArticlescrapController extends BaseController {
 		// 实例化分页类 传入总记录数和每页显示的记录数(25)
 		$show = $Page -> show();
 		// 分页显示输出
-		$post = $model -> limit($Page -> firstRow . ',' . $Page -> listRows) -> where($where) -> order('articlescrap.id DESC') -> select();
+		$post = $model -> limit($Page -> firstRow . ',' . $Page -> listRows) -> where($where) -> order('id DESC') -> select();
 		$this -> assign('model', $post);
 		$this -> assign('page', $show);
 		$this -> display();
