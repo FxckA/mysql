@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo ($title); ?></title>
-	<link rel="stylesheet" href="/Application/Home/View//Public/static/css/style.css">
-	<script type="text/javascript" src="/Application/Home/View//Public/static/js/init.js"></script>
+	<link rel="stylesheet" href="/bishe/Application/Home/View//Public/static/css/style.css">
+	<script type="text/javascript" src="/bishe/Application/Home/View//Public/static/js/init.js"></script>
 </head>
 <body>
 	<h3>欢迎使用ThinkPHP通用后台</h3>
