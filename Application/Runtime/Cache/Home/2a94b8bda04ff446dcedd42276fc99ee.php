@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo ($title); ?></title>
-	<link rel="stylesheet" href="/BISHE/Application/Home/View//Public/static/css/style.css">
-	<script type="text/javascript" src="/BISHE/Application/Home/View//Public/static/js/init.js"></script>
+	<link rel="stylesheet" href="/Application/Home/View//Public/static/css/style.css">
+	<script type="text/javascript" src="/Application/Home/View//Public/static/js/init.js"></script>
 </head>
 <body>
 <h3>欢迎使用ThinkPHP通用后台</h3>
@@ -12,7 +12,6 @@
 <p>详情页: <a href="<?php echo U('Articlescrap/view',array('id'=>1));?>"><?php echo U('Articlescrap/view',array('id'=>1));?></a> </p>
 <p>单页: <a href="<?php echo U('Page/index',array('name'=>'cnsecer'));?>"><?php echo U('Page/index',array('name'=>'cnsecer'));?></a> </p>
 <p>登录页: <a href="<?php echo U('login/login');?>"><?php echo U('login/login');?></a></p>
-<p>QQ登录: <a href="<?php echo U('login/login',array('type'=>'qq'));?>"><?php echo U('login/login',array('type'=>'qq'));?></a></p>
 <hr>
 <p>后台地址: <a href="admin.php">admin.php</a></p>
 <p>账号:admin</p>
