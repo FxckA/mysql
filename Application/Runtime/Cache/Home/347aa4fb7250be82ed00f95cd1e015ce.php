@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo ($title); ?></title>
-	<link rel="stylesheet" href="/Application/Home/View//Public/static/css/style.css">
-	<script type="text/javascript" src="/Application/Home/View//Public/static/js/init.js"></script>
+	<link rel="stylesheet" href="/BISHE/Application/Home/View//Public/static/css/style.css">
+	<script type="text/javascript" src="/BISHE/Application/Home/View//Public/static/js/init.js"></script>
 </head>
 <body>
 	<h3>列表页</h3>

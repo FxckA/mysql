@@ -124,7 +124,7 @@
 	});
 </script>
 <!-- JavaScript -->
-<script src="../static/js/jquery-1.10.2.js"></script>
+<script src="/bishe/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>
 <script src="/bishe/Application/Admin/View//Public/static/js/bootstrap.js"></script>
 <script src="/bishe/Application/Admin/View//Public/static/js/app.js"></script>
 

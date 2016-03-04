@@ -15,7 +15,7 @@
 			}
 		</script>
 		<meta name="keywords" content="Flat Dark Web Login Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates" />
-		<link href="/bishe/Application/Admin/View//Public/login/css/style.css" rel='stylesheet' type='text/css' />
+		<link href="/BISHE/Application/Admin/View//Public/login/css/style.css" rel='stylesheet' type='text/css' />
 		<!--webfonts-->
 		<link href='http://fonts.useso.com/css?family=PT+Sans:400,700,400italic,700italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.useso.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
@@ -44,7 +44,7 @@
 			</div>
 			<div class="clear"> </div>
 			<div class="avtar">
-				<img src="/bishe/Application/Admin/View//Public/login/images/avtar.png" />
+				<img src="/BISHE/Application/Admin/View//Public/login/images/avtar.png" />
 			</div>
 			<form action="<?php echo U('Login/login');?>" method="post">
 				<input type="text" class="text" placeholder="Username" name="username">
