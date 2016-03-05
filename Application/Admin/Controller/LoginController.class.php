@@ -5,18 +5,19 @@ use Think\Controller;
 class LoginController extends Controller {
 	//登陆主页
 	public function index() {
-		$this -> display();
+		$this -> display();//登陆页面展示
 	}
 
 	//登陆验证
 	public function login() {
-		if (!IS_POST)
-			$this -> error("非法请求");
-		$member = M('member');
-		$username = I('post.username', '', 'addslashes');
+		if (!IS_POST){
+			$this -> error("非法请求");//非post请求为非法请求
+		}
+		$member = M('Member');//实力化member表
+		$username = I('post.username', '', 'addslashes');//第一层防御sql注入
 		$password = md5($_POST['password']);
 		//验证账号密码是否正确
-		$user = $member -> where("username = '%s' and password = '%s'", array($username, $password)) -> find();
+		$user = $member -> where("username = '%s' and password = '%s'", array($username, $password)) -> find();//用预编译来防止sql注入
 		if (!$user) {
 			$this -> error('账号或密码错误 :(');
 			exit;
@@ -43,7 +44,7 @@ class LoginController extends Controller {
 
 	//定向之后台主页
 
-	public function logout() {
+	public function logout() {//退出操作，清空下面所有的为null
 		session('adminId', null);
 		session('username', null);
 		redirect(U('Login/index'));

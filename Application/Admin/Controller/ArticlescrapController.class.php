@@ -17,7 +17,7 @@ class ArticlescrapController extends BaseController {
 			$where['member.username'] = array('like', "%$key%");
 			$where['category.title'] = array('like', "%$key%");
 			$where['_logic'] = 'or';
-			$model = D('articlescrap') -> where($where);
+			$model = D('ArticlescrapView') -> where($where);
 		}
 
 		$count = $model -> where($where) -> count();
@@ -38,12 +38,12 @@ class ArticlescrapController extends BaseController {
 	public function add() {
 		//默认显示添加表单
 		if (!IS_POST) {
-			$this -> assign("category", getSortedCategory( M('category') -> select()));
+			$this -> assign("category", getSortedCategory(M('category') -> select()));//getSortedCategory为获取短标签
 			$this -> display();
 		}
 		if (IS_POST) {
 			//如果用户提交数据
-			$model = D("articlescrap");
+			$model = D("Articlescrap");//实例化articlescrap模型
 			$model -> time = time();
 			$model -> user_id = 1;
 			$model -> status = 0;
@@ -69,13 +69,13 @@ class ArticlescrapController extends BaseController {
 	public function update($id) {
 		//默认显示添加表单
 		if (!IS_POST) {
-			$model = M('articlescrap') -> where('id=' . $id) -> find();
-			$this -> assign("category", getSortedCategory( M('category') -> select()));
+			$model = M('articlescrap') -> where("id= %d",$id) -> find();
+			$this -> assign("category", getSortedCategory( M('category') -> select()));//getSortedCategory获取标签
 			$this -> assign('post', $model);
 			$this -> display();
 		}
 		if (IS_POST) {
-			$model = D("articlescrap");
+			$model = D("Articlescrap");
 			if (!$model -> create()) {
 				$this -> error($model -> getError());
 			} else {
@@ -94,8 +94,8 @@ class ArticlescrapController extends BaseController {
 	 * @return [type]     [description]
 	 */
 	public function delete($id) {
-		$model = M('articlescrap');
-		$result = $model -> where("id=" . $id) -> delete();
+		$model = M('Articlescrap');
+		$result = $model -> where("id= %d",$id) -> delete();
 		if ($result) {
 			$this -> success("删除成功", U('articlescrap/index'));
 		} else {
@@ -105,13 +105,13 @@ class ArticlescrapController extends BaseController {
 
 	public function post($id) {//post到前台
 		if (IS_GET) {
-			$status = M('articlescrap') -> where("id=" . $id) -> getField('status');
+			$status = M('Articlescrap') -> where("id= %d",$id) -> getField('status');
 			if ($status === '0') {
 				$data['status'] = 1;
 			} else {
 				$data['status'] = 0;
 			}
-			$result = M('articlescrap') -> where("id=" . $id) -> save($data);
+			$result = M('Articlescrap') -> where("id= %d",$id) -> save($data);
 			if ($result && $data['status'] === 1) {
 				$this -> success("发布成功", U('articlescrap/index'));
 			} elseif ($result && $data['status'] === 0) {
