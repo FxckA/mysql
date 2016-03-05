@@ -11,8 +11,8 @@ class ArticlescrapController extends BaseController {
 	 */
 	public function index($key = "") {
 		if ($key === "") {
-			$model = D('ArticlescrapView');
-		} else {
+			$model = D('ArticlescrapView');//默认情况下显示全部
+		} else {//搜索功能的时候搜索特定的文章
 			$where['articlescrap.title'] = array('like', "%$key%");
 			$where['member.username'] = array('like', "%$key%");
 			$where['category.title'] = array('like', "%$key%");
