@@ -98,7 +98,7 @@ class MemberController extends BaseController {
 	 * @param  [type] $id [description]
 	 * @return [type]     [description]
 	 */
-	public function delete($id) {
+	public function stop($id) {
 		if (C('SUPER_ADMIN_ID') == $id)
 			$this -> error("超级管理员不可禁用!");
 		$model = M('member');

@@ -1,0 +1,257 @@
+body {
+	background: #ecf5fe url(../img/bbb1.jpg) repeat-x scroll 0 0;
+    font-family: "宋体";
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.c {
+    height: 30px;
+    vertical-align: middle;
+}
+.c1 {
+    height: 25px;
+    vertical-align: bottom;
+}
+.a {
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-top: 0;
+}
+.a1 {
+    margin: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-top: 0;
+}
+.b {
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+    padding: 0 20px;
+}
+.b1 {
+    margin: 0;
+    padding: 0 20px;
+}
+.t {
+    border-bottom: 1px dashed #cccccc;
+    height: 25px;
+    width: 400px;
+}
+.t1 {
+    border-bottom: 1px dashed #cccccc;
+    height: 25px;
+}
+a:link {
+    color: #333333;
+    text-decoration: none;
+}
+a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff6600;
+    text-decoration: none;
+}
+body{
+     padding:0px;
+	 margin:0px;
+}
+#link{
+     margin:0px;
+	 padding:0px;
+	 font-size:13px;
+	 font-weight:bold;
+	 background:url(../img/link-bg0.jpg) #000000;
+	 height:35px;
+	 vertical-align:middle;
+	 color:#FFFFFF;
+}
+#link ul{
+     list-style-type:none;
+	 display:block;
+	 margin:0px;
+	 padding:0px;
+}
+#link li{
+     float:left;
+	 padding:0px 0px 0px 0px;
+	 margin:0px;
+}
+li a:link, li a:visited{
+     color:#ffffff;
+	 text-decoration:none;
+}
+li a:hover{
+     color:#FFCC00;
+	 text-decoration:none;
+}
+
+.top{
+     width:1000px;
+	 margin:0 auto;
+}
+.top img{
+     width:1000px;
+	 border:0px;
+}
+
+.fo{
+     width:88px;
+	 text-align:center;
+}
+.tw{
+     width:51px;
+	 text-align:center;
+}
+.fv{
+     width:93px;
+}
+.main{
+     width:1000px;
+	 height:auto;
+	 border:0;
+	 background:#FFFFFF;
+	 margin:0 auto;
+	 padding-bottom:3px;
+}
+.main .left{
+	width:200px;
+	vertical-align:top;
+	float:left;
+	}
+.main .left .shiyan{
+    margin-top:5px;
+}
+.main .left .shiyan .tu{
+    margin-top:5px;
+    height:44px;
+	width:195px;
+}
+.main .left .shiyan .wen .a{
+   margin:0px;
+   border-bottom:1px solid #CCCCCC;
+   padding-left:20px;
+   padding-bottom:0px;
+   padding-top:0px;
+}
+.main .left .shiyan .wen .b{
+   margin:0px;
+   border-bottom:1px solid #CCCCCC;
+   padding-left:20px;
+   padding-right:20px;
+   padding-bottom:0px;
+   padding-top:0px;
+}
+.main .left .shiyan .wen .c{
+   height:30px;
+   vertical-align:middle;
+}
+.main .mid{
+	width:505px;
+	vertical-align:top;
+	float:left;
+	}
+.main .mid .news{
+	margin-top:8px;
+	width:480px;
+	 height:260px;
+	  border:2px solid #f2f2f2;
+	   padding:5px 5px 0px 5px;
+	}
+.main .mid .xwdt{
+	margin-top:5px;
+	
+	}
+.main .mid .xwdt .tupian{
+   margin-top:5px;
+   float:left;
+}
+.main .mid .xwdt .tupian .tu1{
+   float:left; 
+   width:45px;
+}
+.main .mid .xwdt .tupian .text1{
+   float:left; 
+   border-bottom:1px solid #cdcdcd;
+   width:386px;
+   vertical-align:bottom;
+   margin-top:30px;
+}
+.main .mid .xwdt .tupian .tu2{
+   float:right;
+   border-bottom:1px solid #cdcdcd;
+   vertical-align:bottom;
+   margin-top:27px;
+}
+.main .mid .xwdt .tupian .tu2 img{
+	border:0;
+}
+.main .mid .xwdt .xwlb{
+   height:300px;
+   width:480px;
+   float:left
+}
+.main .right{
+	margin-top:10px;
+	margin-right:5px;
+	width:290px;
+	vertical-align:top;
+	float:right;
+	}
+.main .right .jianjie{
+   width:290px;
+   height:290px;
+   margin-top:8px;
+}
+.main .right .jianjie .word{
+   width:290px;
+   height:25px;
+   background:url(../img/pm.jpg);
+   float:left;
+}
+.main .right .jianjie .word .shiyan1{
+    color: #006699;
+	font-weight: bold;
+	margin-left:5px;
+	margin-top:5px;
+	width:70px;
+	float:left;
+}
+.main .right .jianjie .word .shiyan2{
+	margin-top:5px;
+    width:50px;
+	float:right;
+}
+.main .right .jianjie .text2{
+    width:100%;
+	float:left;
+}
+.lianjie{
+	width:1000px;
+	background:#FFFFFF;
+	padding-bottom:7px;
+	margin:0 auto;
+	}
+.lianjie .style1{
+	width:80px;
+    color:#006699;
+	text-align:left;
+    font-weight:bold;
+	margin-top:6px;
+}
+.footer{
+	width:1000px;
+	height:40px;
+	border:0px;
+	margin:0 auto;
+	font-size:12px;
+	padding-top:15px;
+	padding-bottom:15px;
+	}

@@ -25,11 +25,12 @@
 				<th>发布时间</th>
 				<th>作者</th>
 				<th>分类</th>
+				<td>状态</td>
 				<th>操作</th>
 			</tr>
 		</thead>
 		<tbody>
-			<foreach name="model" item="v">
+			<foreach name="aritclescrap" item="v">
 				<tr>
 					<td>{$v.id}</td>
 					<td><a href="#" style="color: inherit;">{$v.title}</a></td>
@@ -43,8 +44,12 @@
 					<td>{$v.time|date="Y/m/d H:i:s",###}</td>
 					<td>{$v.username}</td>
 					<td>{$v.category_title}</td>
+					<td>
+						<if condition="$v.status eq 1">发布
+							<else/><span style="color:red">未发布</span></if>
+					</td>
 					<if condition="$v.status eq 1">
-						<td><a href="{:U('articlescrap/post?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('请确认!!!');">撤销</a> | <a href="{:U('articlescrap/update?id=')}{$v.id}">编辑</a> | <a href="{:U('articlescrap/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
+						<td><a href="{:U('articlescrap/post?id=')}{$v.id}" style="color:red;">撤销</a> | <a href="{:U('articlescrap/update?id=')}{$v.id}">编辑</a> | <a href="{:U('articlescrap/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
 						<else/>
 						<td><a href="{:U('articlescrap/post?id=')}{$v.id}" style="color:#50AD1E;">发布</a> | <a href="{:U('articlescrap/update?id=')}{$v.id}">编辑</a> | <a href="{:U('articlescrap/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
 					</if>

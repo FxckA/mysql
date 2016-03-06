@@ -47,9 +47,9 @@
                 </td> 
                 <td><if condition="$v.status eq 1">正常<else/><span style="color:red">禁用</span></if></td>
                 <if condition="$v.status eq 1">	
-                	<td><a href="{:U('member/update?id=')}{$v.id}">编辑</a> | <a href="{:U('member/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('禁用后用户将不能登陆后台!\n\n请确认!!!');">禁用</a></td>
+                	<td><a href="{:U('member/update?id=')}{$v.id}">编辑</a> | <a href="{:U('member/stop?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('禁用后用户将不能登陆后台!\n\n请确认!!!');">禁用</a></td>
             	<else/>
-            		<td><a href="{:U('member/update?id=')}{$v.id}">编辑</a> | <a href="{:U('member/delete?id=')}{$v.id}" style="color:#50AD1E;">启用</a></td>
+            		<td><a href="{:U('member/update?id=')}{$v.id}">编辑</a> | <a href="{:U('member/stop?id=')}{$v.id}" style="color:#50AD1E;">启用</a></td>
             	</if>
             </tr>
         </foreach>

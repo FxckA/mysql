@@ -11,7 +11,7 @@ class ArticlescrapController extends BaseController {
 	 */
 	public function index($key = "") {
 		if ($key === "") {
-			$model = D('ArticlescrapView');//默认情况下显示全部
+			$model = M('Articlescrap');//默认情况下显示全部
 		} else {//搜索功能的时候搜索特定的文章
 			$where['articlescrap.title'] = array('like', "%$key%");
 			$where['member.username'] = array('like', "%$key%");
@@ -27,7 +27,7 @@ class ArticlescrapController extends BaseController {
 		$show = $Page -> show();
 		// 分页显示输出
 		$post = $model -> limit($Page -> firstRow . ',' . $Page -> listRows) -> where($where) -> order('id DESC') -> select();
-		$this -> assign('model', $post);
+		$this -> assign('aritclescrap', $post);
 		$this -> assign('page', $show);
 		$this -> display();
 	}
