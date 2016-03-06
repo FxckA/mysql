@@ -103,7 +103,7 @@ class MemberController extends BaseController {
 			$this -> error("超级管理员不可禁用!");
 		$model = M('member');
 		//查询status字段值
-		$result = $model -> find($id);
+		$result = $model -> find(intval($id));
 		//更新字段
 		$data['id'] = $id;
 		if ($result['status'] == 1) {

@@ -1,6 +1,0 @@
-[ 2016-02-17T11:35:24+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Login&a=login
-ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tpadmin.member' doesn't exist
-
-[ 2016-02-17T11:58:05+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Index&a=member
-ERR: 非法操作:member
-
