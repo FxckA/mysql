@@ -45,13 +45,13 @@
 					<td>{$v.username}</td>
 					<td>{$v.category_title}</td>
 					<td>
-						<if condition="$v.status eq 1">发布
+						<if condition="$v.status eq 1"><span style="color:darkblue">发布</span>
 							<else/><span style="color:red">未发布</span></if>
 					</td>
 					<if condition="$v.status eq 1">
 						<td><a href="{:U('articlescrap/post?id=')}{$v.id}" style="color:red;">撤销</a> | <a href="{:U('articlescrap/update?id=')}{$v.id}">编辑</a> | <a href="{:U('articlescrap/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
 						<else/>
-						<td><a href="{:U('articlescrap/post?id=')}{$v.id}" style="color:#50AD1E;">发布</a> | <a href="{:U('articlescrap/update?id=')}{$v.id}">编辑</a> | <a href="{:U('articlescrap/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
+						<td><a href="{:U('articlescrap/post?id=')}{$v.id}" class="label label-success">发布</a> | <a href="{:U('articlescrap/update?id=')}{$v.id}">编辑</a> | <a href="{:U('articlescrap/delete?id=')}{$v.id}" style="color:red;" onclick="javascript:return del('您真的确定要删除吗？\n\n删除后将不能恢复!');">删除</a></td>
 					</if>
 				</tr>
 			</foreach>
