@@ -1,6 +1,0 @@
-[ 2016-03-13T23:12:10+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=post&a=index
-ERR: 无法加载控制器:Post
-
-[ 2016-03-13T23:12:12+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=post&a=index
-ERR: 无法加载控制器:Post
-
