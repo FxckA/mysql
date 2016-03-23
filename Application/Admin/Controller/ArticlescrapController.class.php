@@ -94,7 +94,6 @@ class ArticlescrapController extends BaseController {
 	 * @return [type]     [description]
 	 */
 	public function delete($id) {
-		$id = intval($id);
 		$model = M('Articlescrap');
 		$result = $model -> where("id= %d",$id) -> delete();
 		if ($result) {
@@ -105,7 +104,6 @@ class ArticlescrapController extends BaseController {
 	}
 
 	public function post($id) {//post到前台
-		$id = intval($id);
 		if (IS_GET) {
 			$status = M('Articlescrap') -> where("id= %d",$id) -> getField('status');
 			if ($status === '0') {
