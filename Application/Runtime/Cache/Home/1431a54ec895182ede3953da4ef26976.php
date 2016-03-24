@@ -13,10 +13,10 @@
     <!--导航栏-->
     <div class="nav">
       <ul class="nav_con">
-        <li class="tw"><a href="<?php echo U("index/index");?>">首页</a></li>
+        <li class="tw"><a href="index.html">首页</a></li>
         <li class="fo">|<a href="sysgk.html"><b>实验室概况</b></a></li>
         <li class="fo">|<a href="dtxw.html"><b>动态新闻</b></a></li>
-        <li class="fo">|<a href="#"><b>科学研究</b></a></li>
+        <li class="fo">|<a href="kxyj.html"><b>科学研究</b></a></li>
         <li class="fo">|<a href="xstd.html"><b>学术梯队</b></a></li>
         <li class="fo">|<a href="yjsjy.html"><b>研究生教育</b></a></li>
         <li class="fo">|<a href="bkjx.html"><b>本科教学</b></a></li>
@@ -26,7 +26,7 @@
     <!--所在位置-->
     <div class="locat">
       <div class="locat_text">
-      您现在的位置：<a href="index.html">首页</a> > <a href="kxyj.html">科学研究</a> > 
+      您现在的位置：<a href="index.html">首页</a> > <a href="bkjx.html">本科教学</a> > 
       </div>
     </div>
     <!--主体部分-->
@@ -97,7 +97,7 @@
            <img src="/Application/Home/View//Public/static/img/bkjx1.jpg"/>
 		   </div>
 		   <div class="wen">
-		     <div class="ww">
+		    <div class="ww">
                <ul>
                  <li><a href="#">专业介绍</a></li>
                  <li><a href="#">培养方案</a></li>
@@ -110,26 +110,12 @@
       <!--实验室的内容-->
       <div class="content">
         <div class="con_text">
-          <div class="list">
-            <ul>
-              <li><a target="_blank" href="#"> 是否是否是否达到测试的</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 达到八九点啊阿发发顺丰</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-            </ul>
-          </div>
+          这里是本科教学（专业介绍、招生）
         </div>
       </div>
     </div>
       <!--底部-->
-    <div class="footer">
+   <div class="footer">
       <div class="f">
              CopyRight 版权所有© 广西师范大学计算机科学与信息工程学院 地址：广西桂林市七星区育才路15号-计算机科学与信息工程学院 <br>
              电话：0773-5816858(育才校区院办) 0773-3698036(雁山校区院办)<br>       

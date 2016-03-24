@@ -3,24 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>珍稀濒危动植物生态与环境保护重点实验室</title>
-<link rel="stylesheet" href="/bishe/Application/Home/View//Public/static/css/laboratory.css" />
-<link rel="stylesheet" href="/bishe/Application/Home/View//Public/static/css/newjs.css" />
+<link rel="stylesheet" href="/Application/Home/View//Public/static/css/laboratory.css" />
+<link rel="stylesheet" href="/Application/Home/View//Public/static/css/newjs.css" />
 </head>
 <body>
     <!--头部-->
     <div class="top">
-       <img src="/bishe/Application/Home/View//Public/static/img/top_pic.gif" alt="珍稀濒危动植物生态与环境保护重点实验室" />
+       <img src="/Application/Home/View//Public/static/img/top_pic.gif" alt="珍稀濒危动植物生态与环境保护重点实验室" />
     </div>
     <!--导航栏-->
     <div class="nav">
       <ul class="nav_con">
-        <li class="tw"><a href="index.html">首页</a></li>
-        <li class="fo">|<a href="sysgk.html"><b>实验室概况</b></a></li>
-        <li class="fo">|<a href="dtxw.html"><b>动态新闻</b></a></li>
+        <li class="tw"><a href="<?php echo U("index/index");?>">首页</a></li>
+        <li class="fo">|<a href="<?php echo U("index/synopsis");?>"><b>实验室概况</b></a></li>
+        <li class="fo">|<a href="<?php echo U("index/news");?>"><b>动态新闻</b></a></li>
         <li class="fo">|<a href="<?php echo U("index/research");?>"><b>科学研究</b></a></li>
-        <li class="fo">|<a href="xstd.html"><b>学术梯队</b></a></li>
-        <li class="fo">|<a href="yjsjy.html"><b>研究生教育</b></a></li>
-        <li class="fo">|<a href="bkjx.html"><b>本科教学</b></a></li>
+        <li class="fo">|<a href="<?php echo U("index/study");?>"><b>学术梯队</b></a></li>
+        <li class="fo">|<a href="<?php echo U("index/education");?>"><b>研究生教育</b></a></li>
+        <li class="fo">|<a href="<?php echo U("index/benkestudy");?>"><b>本科教学</b></a></li>
         <li class="fo">|<a href="<?php echo U("index/callme");?>"><b>联系我们</b></a></li>
       </ul>
     </div>
@@ -30,18 +30,18 @@
 	  <div class="left">
 	    <div class="shiyan">
 		   <div class="tu">
-           <img src="/bishe/Application/Home/View//Public/static/img/sysgk1.jpg"/>
+           <img src="/Application/Home/View//Public/static/img/sysgk1.jpg"/>
 		   </div>
 		   <div class="wen">
              <div class="ww">
                <ul>
                  <li><a href="#">实验室简介</a></li>
-                 <li><a target="_blank" href="../../../themes/www/xrld.html">现任领导</a></li>
+                 <li><a target="_blank" href="<?php echo U("index/leds");?>">现任领导</a></li>
                </ul>
              </div>
 		   </div>
            <div class="tu">
-           <img src="/bishe/Application/Home/View//Public/static/img/dtxw1.jpg"/>
+           <img src="/Application/Home/View//Public/static/img/dtxw1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -53,7 +53,7 @@
              </div>
 		   </div>
 		   <div class="tu">
-           <img src="/bishe/Application/Home/View//Public/static/img/kxyj1.jpg"/>
+           <img src="/Application/Home/View//Public/static/img/kxyj1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -66,7 +66,7 @@
              </div>
 		   </div>
 		   <div class="tu">
-           <img src="/bishe/Application/Home/View//Public/static/img/xstd1.jpg"/>
+           <img src="/Application/Home/View//Public/static/img/xstd1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -77,7 +77,7 @@
              </div>
 		   </div>
 		   <div class="tu">
-           <img src="/bishe/Application/Home/View//Public/static/img/yjsjy1.jpg"/>
+           <img src="/Application/Home/View//Public/static/img/yjsjy1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -89,7 +89,7 @@
              </div>
 		   </div>
 		   <div class="tu">
-           <img src="/bishe/Application/Home/View//Public/static/img/bkjx1.jpg"/>
+           <img src="/Application/Home/View//Public/static/img/bkjx1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -109,25 +109,25 @@
             <div class="pic1" id="fc" style="filter:progid:DXImageTransform.Microsoft.Fade ( duration=0.5,overlap=1.0 );">
               <div style="display:block;">  
               <!-- 图1 -->
-              <a href="#" target="_blank"><img name="page_cnt_1" src="/bishe/Application/Home/View//Public/static/img/tu1.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div> 
+              <a href="#" target="_blank"><img name="page_cnt_1" src="/Application/Home/View//Public/static/img/tu1.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div> 
               <div style="display:none;"> 
               <!-- 图2 -->
-              <a href="#" target="_blank"><img name="page_cnt_1" src="/bishe/Application/Home/View//Public/static/img/tu2.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>              
+              <a href="#" target="_blank"><img name="page_cnt_1" src="/Application/Home/View//Public/static/img/tu2.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>              
               <div style="display:none;">
               <!-- 图3 -->
-              <a href="#" target="_blank"><img name="page_cnt_1" src="/bishe/Application/Home/View//Public/static/img/tu3.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>              
+              <a href="#" target="_blank"><img name="page_cnt_1" src="/Application/Home/View//Public/static/img/tu3.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>              
               <div style="display:none;"> 
               <!-- 图4 -->
-              <a href="#" target="_blank"><img name="page_cnt_1" src="/bishe/Application/Home/View//Public/static/img/tu4.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>              
+              <a href="#" target="_blank"><img name="page_cnt_1" src="/Application/Home/View//Public/static/img/tu4.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>              
               <div style="display:none;">
               <!-- 图5 -->
-              <a href="#" target="_blank"><img name="page_cnt_1" src="/bishe/Application/Home/View//Public/static/img/tu5.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>              
+              <a href="#" target="_blank"><img name="page_cnt_1" src="/Application/Home/View//Public/static/img/tu5.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>              
               <div style="display:none;">
               <!-- 图6 -->
-              <a href="#" target="_blank"><img name="page_cnt_1" src="/bishe/Application/Home/View//Public/static/img/tu6.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>
+              <a href="#" target="_blank"><img name="page_cnt_1" src="/Application/Home/View//Public/static/img/tu6.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>
               <div style="display:none;">
               <!-- 图7 -->
-              <a href="#" target="_blank"><img name="page_cnt_1" src="/bishe/Application/Home/View//Public/static/img/tu7.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>            
+              <a href="#" target="_blank"><img name="page_cnt_1" src="/Application/Home/View//Public/static/img/tu7.jpg" onMouseOver="clearAuto();" onMouseOut="setAuto()" /></a></div>            
             </div>
           </div>
           <div class="new_t">
@@ -168,19 +168,19 @@
               </div>
             </div>
           </div>
-          <script type="text/javascript" src="/bishe/Application/Home/View//Public/static/js/news.js"></script>
+          <script type="text/javascript" src="/Application/Home/View//Public/static/js/news.js"></script>
         </div>
         <!--动态新闻-->
         <div class="xwdt">
           <div class="tupian">
 		    <div class="tu1">
-			  <img src="/bishe/Application/Home/View//Public/static/img/tzx.jpg"/>
+			  <img src="/Application/Home/View//Public/static/img/tzx.jpg"/>
 			</div>
 			<div class="text1">
 			  <strong>动态新闻</strong>
 			</div>
 			<div class="tu2">
-			  <a href="#"><img src="/bishe/Application/Home/View//Public/static/img/more1.jpg"/></a>
+			  <a href="#"><img src="/Application/Home/View//Public/static/img/more1.jpg"/></a>
 			</div>
             <div class="xwlb">
               <div class="list">
@@ -195,7 +195,6 @@
                   <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
                   <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
                   <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-
                 </ul>
               </div>
             </div>
@@ -205,13 +204,13 @@
         <div class="xwdt">
           <div class="tupian">
 		    <div class="tu1">
-			  <img src="/bishe/Application/Home/View//Public/static/img/dtt.jpg"/>
+			  <img src="/Application/Home/View//Public/static/img/dtt.jpg"/>
 			</div>
 			<div class="text1">
 			  <strong>通知公告</strong>
 			</div>
 			<div class="tu2">
-			  <a href="#"><img src="/bishe/Application/Home/View//Public/static/img/more1.jpg"/></a>
+			  <a href="#"><img src="/Application/Home/View//Public/static/img/more1.jpg"/></a>
 			</div>
             <div class="xwlb">
               <div class="list">
@@ -245,7 +244,7 @@
 		    <div class="txt_w1">
               <p> 珍稀濒危动植物生态与环境保护重点实验室成立于2005年，是在整合野生动植物生态学实验室、生命过程与环境分析科学实验室以及天然产物研究与开发实验室3个广西高校重点实验室的基础上组建而成的，主要依托于生态学和环境科学2个广西重点学科。该实验室于2008年10月被教育部批准为省部共建重点实验室。</p>
             </div>
-            <div class="txt_w2"><img alt="珍稀濒危动植物生态与环境保护重点实验室" src="/bishe/Application/Home/View//Public/static/img/sys1.jpg" /></div>
+            <div class="txt_w2"><img alt="珍稀濒危动植物生态与环境保护重点实验室" src="/Application/Home/View//Public/static/img/sys1.jpg" /></div>
             <div class="txt_w1">
                <p>1991年成立了智能信号处理与识别研究小组，同年成立了国内第一个神经网络研究中心。1993年承办了全国神经网络大会。2002年，在保铮教授提议和大力支持下，利用已有的基础，将研究方向作进一步拓广，经学校批准成立了智能信息处理研究所和教育部留学回国人员实验室。
               </p>

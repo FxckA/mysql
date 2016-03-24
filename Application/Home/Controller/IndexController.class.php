@@ -10,31 +10,33 @@ class IndexController extends BaseController {
 		$this -> display();
 	}
 
-	public function led() {//现任领导
-
+	public function leds() {//现任领导
+		$this -> display();
 	}
 
 	public function synopsis() {//实验室简介
-
+		$this -> display();
 	}
 
 	public function news() {//动态新闻
-
+		$this -> display();
 	}
 
 	public function research() {//科学研究
-		$this ->display();
+		$this -> display();
 	}
 
 	public function study() {//学术梯队
-
+		$this -> display();
 	}
 
 	public function education() {//研究生教学
+		$this -> display();
 
 	}
 
 	public function benkestudy() {//本科生教学
+		$this -> display();
 
 	}
 
