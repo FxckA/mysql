@@ -1,3 +1,0 @@
-[ 2016-03-06T23:24:24+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=articlescrap&a=index
-ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tpadmin.articlescrap_view' doesn't exist
-
