@@ -108,9 +108,16 @@
 		 </div>
 	  </div>
       <!--实验室的内容-->
+     <!--实验室的内容-->
       <div class="content">
         <div class="con_text">
-          这里是动态新闻列表
+          <div class="list">
+            <ul>
+              	<volist name="news" id="vo">
+ <li><a target="_blank" href="#">{$vo.title}</a><span>01-21</span></li>
+                	</volist>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

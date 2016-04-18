@@ -62,7 +62,6 @@ class CategoryController extends BaseController {
 		//默认显示添加表单
 		if (!IS_POST) {
 			$model = M('category') -> find(I('id'));
-
 			$this -> assign('cate', getSortedCategory( M('category') -> select()));
 			$this -> assign('model', $model);
 			$this -> display();

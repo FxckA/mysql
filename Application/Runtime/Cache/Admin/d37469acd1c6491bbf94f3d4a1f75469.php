@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>编辑公告</title>
+    <title>添加分类</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/bishe/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
-    <link href="/bishe/Application/Admin/View//Public/static/css/sb-admin.css" rel="stylesheet">
-    <link rel="stylesheet" href="/bishe/Application/Admin/View//Public/static/font-awesome/css/font-awesome.min.css">
+    <link href="/Application/Admin/View//Public/static/css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Application/Admin/View//Public/static/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -77,61 +77,39 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 <div id="page-wrapper">
-	<form method="post" action="<?php echo U('news/update?id='); echo ($category["id"]); ?>">
+	<form method="post" action="<?php echo U('category/update');?>">
 		<div class="form-group">
-			<label for="post-title">文章标题</label>
-			<input type="text" name="title" class="form-control" value="<?php echo ($post["title"]); ?>" id="post-title" placeholder="输入文章标题">
+			<label for="aa">分类标题</label>
+			<input type="text" name="title" class="form-control" id="aa" value="<?php echo ($model["title"]); ?>" placeholder="输入分类标题">
 		</div>
 		<div class="form-group">
-			<label for="post-cate">文章分类</label>
-			<select name="cate_id" id="post-cate" class="form-control">
-				<?php if(is_array($category)): foreach($category as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($post[ 'cate_id']==$v[ 'id']) {echo 'selected="selected"' ;}?>><?php echo ($v["html"]); ?> <?php echo ($v["title"]); ?></option><?php endforeach; endif; ?>
+			<label for="bb">父分类</label>
+			<select name="pid" id="bb" class="form-control">
+				<option value="">顶级分类</option>
+				<?php if(is_array($cate)): foreach($cate as $key=>$v): ?><option value="<?php echo ($v["id"]); ?>" <?php if($model['pid']==$v['id']) {echo 'selected="selected"' ;}?> ><?php echo ($v["html"]); ?> <?php echo ($v["title"]); ?></option><?php endforeach; endif; ?>
 			</select>
 		</div>
 		<div class="form-group">
-			<label for="post-content">文章内容</label>
-			<script id="post-content" name="content" type="text/plain"><?php echo (htmlspecialchars_decode($post["content"])); ?></script>
+			<label for="ee">分类别名</label>
+			<input type="text" name="name" class="form-control" id="cc" value="<?php echo ($model["name"]); ?>" placeholder="输入分类别名,不能和其他分类别名重复">
 		</div>
 		<div class="form-group">
-			<label>文章类型</label>
-			<label class="radio-inline">
-				<input type="radio" name="type" id="type" value="1" <?php if($post["type"] == 1): ?>checked="checked"<?php endif; ?> >普通
-			</label>
-			<label class="radio-inline">
-				<input type="radio" name="type" id="type" value="2" <?php if($post["type"] == 2): ?>checked="checked"<?php endif; ?>>置顶
-			</label>
-			<label class="radio-inline">
-				<input type="radio" name="type" id="type" value="3" <?php if($post["type"] == 3): ?>checked="checked"<?php endif; ?>>热门
-			</label>
-			<label class="radio-inline">
-				<input type="radio" name="type" id="type" value="4" <?php if($post["type"] == 4): ?>checked="checked"<?php endif; ?>>推荐
-			</label>
+			<label for="dd">关键词</label>
+			<input type="text" name="keywords" class="form-control" id="dd" value="<?php echo ($model["keywords"]); ?>" placeholder="请输入SEO关键词(选填)">
 		</div>
-		<input type="hidden" name="id" value="<?php echo ($post["id"]); ?>">
-		<button type="submit" class="btn btn-default">提交</button>
+		<div class="form-group">
+			<label for="ee">描述信息</label>
+			<textarea name="description" id="ee" cols="30" rows="10" class="form-control" placeholder="请输入分类描述(选填)"><?php echo ($model["description"]); ?></textarea>
+		</div>
+		<input type="hidden" name="id" value="<?php echo ($model["id"]); ?>">
+		<button type="submit" class="btn btn-default">更新</button>
 		<button class="btn btn-default" onclick="javascript:history.back();">返回</button>
 	</form>
-
 </div>
-<!-- 配置文件 -->
-<script type="text/javascript" src="/bishe/Public/ueditor/ueditor.config.js"></script>
-<!-- 编辑器源码文件 -->
-<script type="text/javascript" src="/bishe/Public/ueditor/ueditor.all.js"></script>
-<!-- 实例化编辑器 -->
-<script type="text/javascript">
-	var ue = UE.getEditor('post-content', {
-		toolbars: [
-			['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'strikethrough', '|', 'simpleupload', 'insertimage', 'attachment', 'emotion', 'link', 'unlink', '|', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'searchreplace', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc'],
-			['inserttable', 'insertrow', 'insertcol', 'mergeright', 'mergedown', 'deleterow', 'deletecol', 'splittorows', 'splittocols', 'splittocells', 'deletecaption', 'inserttitle', 'mergecells', 'deletetable', 'insertparagraphbeforetable', 'paragraph', 'fontsize', 'fontfamily']
-		],
-		initialFrameHeight: 500,
-		zIndex: 100
-	});
-</script>
 <!-- JavaScript -->
-<script src="/bishe/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>
-<script src="/bishe/Application/Admin/View//Public/static/js/bootstrap.js"></script>
-<script src="/bishe/Application/Admin/View//Public/static/js/app.js"></script>
+<script src="/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>
+<script src="/Application/Admin/View//Public/static/js/bootstrap.js"></script>
+<script src="/Application/Admin/View//Public/static/js/app.js"></script>
 
 </body>
 </html>

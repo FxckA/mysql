@@ -6,11 +6,11 @@
     <title>后台主页</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/bishe/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/Application/Admin/View//Public/static/css/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
-    <link href="/bishe/Application/Admin/View//Public/static/css/sb-admin.css" rel="stylesheet">
-    <link rel="stylesheet" href="/bishe/Application/Admin/View//Public/static/font-awesome/css/font-awesome.min.css">
+    <link href="/Application/Admin/View//Public/static/css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Application/Admin/View//Public/static/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -197,9 +197,9 @@
 </div>
 
 <!-- JavaScript -->
-<script src="/bishe/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>
-<script src="/bishe/Application/Admin/View//Public/static/js/bootstrap.js"></script>
-<script src="/bishe/Application/Admin/View//Public/static/js/app.js"></script>
+<script src="/Application/Admin/View//Public/static/js/jquery-1.10.2.js"></script>
+<script src="/Application/Admin/View//Public/static/js/bootstrap.js"></script>
+<script src="/Application/Admin/View//Public/static/js/app.js"></script>
 
 </body>
 </html>

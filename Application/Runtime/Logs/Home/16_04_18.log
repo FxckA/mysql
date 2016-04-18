@@ -1,9 +1,0 @@
-[ 2016-04-18T16:39:09+08:00 ] 127.0.0.1 /bishe/index.php?m=&c=Articlescrap&a=view
-ERR: 参数错误或者未定义:id
-
-[ 2016-04-18T16:47:04+08:00 ] 127.0.0.1 /bishe/index.php?m=&c=Articlescrap&a=view&id=12
-ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
-
-[ 2016-04-18T16:48:01+08:00 ] 127.0.0.1 /bishe/index.php?m=&c=Articlescrap&a=view
-ERR: 参数错误或者未定义:id
-
