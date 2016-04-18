@@ -185,16 +185,7 @@
             <div class="xwlb">
               <div class="list">
                 <ul>
-                  <li><a target="_blank" href="#"> 是否是否是否达到测试的</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 达到八九点啊阿发发顺丰</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+                	<?php if(is_array($articlescrap)): $i = 0; $__LIST__ = $articlescrap;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a target="_blank" href="#"><?php echo ($vo["title"]); ?></a><span>01-21</span></li><?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
               </div>
             </div>
@@ -215,18 +206,8 @@
             <div class="xwlb">
               <div class="list">
                 <ul>
-                  <li><a target="_blank" href="#"> 是否是否是否达到</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 按文档按错才支持</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                  <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
-                </ul>
+                	<?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li><a target="_blank" href="#"><?php echo ($vo["title"]); ?></a><span>01-21</span></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                 </ul>
               </div>
             </div>
           </div>

@@ -7,6 +7,11 @@ use Think\Controller;
 class IndexController extends BaseController {
 
 	public function index() {//首页展示
+	    $articlescrap = M('articlescrap')-> where("status = 1")->select();
+		$news = M("news")-> where("status = 1")->select();
+		$this->assign("articlescrap",$articlescrap);
+		$this->assign("news",$news);
+		
 		$this -> display();
 	}
 

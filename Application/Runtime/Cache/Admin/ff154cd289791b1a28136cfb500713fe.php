@@ -42,6 +42,9 @@
         <a href="<?php echo U('articlescrap/index');?>"><i class="fa fa-edit"></i> 文章管理</a>
     </li>
     <li class="dropdown">
+        <a href="<?php echo U('news/index');?>"><i class="fa fa-edit"></i> 公告管理</a>
+    </li>
+    <li class="dropdown">
         <a href="<?php echo U('page/index');?>"><i class="fa fa-file-text-o"></i> 单页管理 </a>
     </li>
     <li class="dropdown">
