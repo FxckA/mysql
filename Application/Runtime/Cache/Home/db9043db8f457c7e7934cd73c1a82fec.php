@@ -1,32 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>珍稀濒危动植物生态与环境保护重点实验室</title>
-<link rel="stylesheet" href="__STATIC__/css/sysgk.css">
+<link rel="stylesheet" href="/bishe/Application/Home/View//Public/static/css/sysgk.css">
 </head>
 <body>
     <!--头部-->
     <div class="top">
-       <img src="__STATIC__/img/top_pic.gif" alt="珍稀濒危动植物生态与环境保护重点实验室" />
+       <img src="/bishe/Application/Home/View//Public/static/img/top_pic.gif" alt="珍稀濒危动植物生态与环境保护重点实验室" />
     </div>
     <!--导航栏-->
-   <div class="nav">
+    <div class="nav">
       <ul class="nav_con">
-        <li class="tw"><a href="{:U("index/index")}">首页</a></li>
-        <li class="fo">|<a href="{:U("index/synopsis")}"><b>实验室概况</b></a></li>
-        <li class="fo">|<a href="{:U("index/news")}"><b>动态新闻</b></a></li>
-        <li class="fo">|<a href="{:U("index/research")}"><b>科学研究</b></a></li>
-        <li class="fo">|<a href="{:U("index/study")}"><b>学术梯队</b></a></li>
-        <li class="fo">|<a href="{:U("index/education")}"><b>研究生教育</b></a></li>
-        <li class="fo">|<a href="{:U("index/benkestudy")}"><b>本科教学</b></a></li>
-        <li class="fo">|<a href="{:U("index/callme")}"><b>联系我们</b></a></li>
+        <li class="tw"><a href="<?php echo U("index/index");?>">首页</a></li>
+        <li class="fo">|<a href="<?php echo U("index/synopsis");?>"><b>实验室概况</b></a></li>
+        <li class="fo">|<a href="<?php echo U("index/news");?>"><b>动态新闻</b></a></li>
+        <li class="fo">|<a href="<?php echo U("index/research");?>"><b>科学研究</b></a></li>
+        <li class="fo">|<a href="xstd.html"><b>学术梯队</b></a></li>
+        <li class="fo">|<a href="yjsjy.html"><b>研究生教育</b></a></li>
+        <li class="fo">|<a href="bkjx.html"><b>本科教学</b></a></li>
+        <li class="fo">|<a href="lxwm.html"><b>联系我们</b></a></li>
       </ul>
     </div>
     <!--所在位置-->
     <div class="locat">
       <div class="locat_text">
-      您现在的位置：<a href="index.html">首页</a> > <a href="yjsjy.html">研究生教育</a> > 
+      您现在的位置：<a href="index.html">首页</a> > <a href="kxyj.html">科学研究</a> > 
       </div>
     </div>
     <!--主体部分-->
@@ -35,7 +35,7 @@
 	  <div class="left">
 	    <div class="shiyan">
 		   <div class="tu">
-           <img src="__STATIC__/img/sysgk1.jpg"/>
+           <img src="/bishe/Application/Home/View//Public/static/img/sysgk1.jpg"/>
 		   </div>
 		   <div class="wen">
              <div class="ww">
@@ -46,7 +46,7 @@
              </div>
 		   </div>
            <div class="tu">
-           <img src="__STATIC__/img/dtxw1.jpg"/>
+           <img src="/bishe/Application/Home/View//Public/static/img/dtxw1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -58,7 +58,7 @@
              </div>
 		   </div>
 		   <div class="tu">
-           <img src="__STATIC__/img/kxyj1.jpg"/>
+           <img src="/bishe/Application/Home/View//Public/static/img/kxyj1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -71,7 +71,7 @@
              </div>
 		   </div>
 		   <div class="tu">
-           <img src="__STATIC__/img/xstd1.jpg"/>
+           <img src="/bishe/Application/Home/View//Public/static/img/xstd1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -82,7 +82,7 @@
              </div>
 		   </div>
 		   <div class="tu">
-           <img src="__STATIC__/img/yjsjy1.jpg"/>
+           <img src="/bishe/Application/Home/View//Public/static/img/yjsjy1.jpg"/>
 		   </div>
 		   <div class="wen">
 		    <div class="ww">
@@ -94,10 +94,10 @@
              </div>
 		   </div>
 		   <div class="tu">
-           <img src="__STATIC__/img/bkjx1.jpg"/>
+           <img src="/bishe/Application/Home/View//Public/static/img/bkjx1.jpg"/>
 		   </div>
 		   <div class="wen">
-		    <div class="ww">
+		     <div class="ww">
                <ul>
                  <li><a href="#">专业介绍</a></li>
                  <li><a href="#">培养方案</a></li>
@@ -110,7 +110,21 @@
       <!--实验室的内容-->
       <div class="content">
         <div class="con_text">
-          这里是研究生教学（在读研究生、毕业研究生）
+          <div class="list">
+            <ul>
+              <li><a target="_blank" href="#"> 是否是否是否达到测试的</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 达到八九点啊阿发发顺丰</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+              <li><a target="_blank" href="#"> 111111111111</a><span>01-21</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
