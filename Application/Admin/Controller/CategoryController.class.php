@@ -62,7 +62,6 @@ class CategoryController extends BaseController {
 		//默认显示添加表单
 		if (!IS_POST) {
 			$model = M('category') -> find(I('id'));
-
 			$this -> assign('cate', getSortedCategory( M('category') -> select()));
 			$this -> assign('model', $model);
 			$this -> display();
@@ -90,7 +89,7 @@ class CategoryController extends BaseController {
 	public function delete($id) {
 		$model = M('category');
 		//查询属于这个分类的文章
-		$posts = M('post') -> where("cate_id= %d",$id) -> select();
+		$posts = M('articlescrap') -> where("cate_id= %d",$id) -> select();
 		if ($posts) {
 			$this -> error("禁止删除含有文章的分类");
 		}
