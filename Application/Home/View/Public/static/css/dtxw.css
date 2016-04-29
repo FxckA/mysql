@@ -1,5 +1,4 @@
 body {
-	background: #ecf5fe url(../img/bbb1.jpg) repeat-x scroll 0 0;
     font-family: "宋体";
     font-size: 12px;
     margin: 0;
@@ -115,7 +114,7 @@ li a:hover{
 }
 .main{
      width:1000px;
-	 border:0;
+	 border:1px solid #CCCCCC;
 	 background:#FFFFFF;
 	 margin:0 auto;
 	 padding-bottom:3px;
