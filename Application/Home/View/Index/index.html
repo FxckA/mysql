@@ -92,7 +92,7 @@
               <div class="list">
                 <ul>
                 	<volist name="articlescrap" id="vo">
- <li><a target="_blank" href="{:U("automake/index?id=")}{$vo.id}">{$vo.title}</a><span>01-21</span></li>
+ <li><a target="_blank" href="{:U("automake/index?id=")}{$vo.id}">{$vo.title}</a><span>{$vo.time|date="y-m-d",###}</span></li>
                 	</volist>
                 </ul>
               </div>
@@ -115,7 +115,7 @@
               <div class="list">
                 <ul>
                 	<volist name="news" id="vo">
- <li><a target="_blank" href="{:U("automake/index?id=")}{$vo.id}">{$vo.title}</a><span>01-21</span></li>
+ <li><a target="_blank" href="{:U("automake/index?id=")}{$vo.id}">{$vo.title}</a><span>{$vo.time|date="y-m-d",###}</span></li>
                 	</volist>
                  </ul>
               </div>

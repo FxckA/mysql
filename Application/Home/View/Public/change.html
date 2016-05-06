@@ -1,11 +1,10 @@
- <div class="content">
-        <div class="con_text">
-          <div class="f1">{$title}</div>
-          <div class="f2">点击数：#     <span>发布时间：#</span></div>
-          <hr />
-          <div class="f3">
-          	{$content}
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="content">
+	<div class="con_text">
+		<div class="f1">{$title}</div>
+		<div class="f2">点击数：# <span>发布时间：{$time|date="y-m-d",###}</span></div>
+		<hr />
+		<div class="f3">
+			{$content}
+		</div>
+	</div>
+</div>

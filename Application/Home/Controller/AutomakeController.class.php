@@ -10,6 +10,7 @@ class AutomakeController extends BaseController {
 		if(!empty($id)){
 			$data = M('news')->where("id = %d",intval($id))->select();
 			$this -> assign("title",htmlspecialchars_decode($data[0]["title"]));
+			$this -> assign("time",htmlspecialchars_decode($data[0]["time"]));
 			$this -> assign("content",htmlspecialchars_decode($data[0]["content"]));
 			$this -> display();
 		}
